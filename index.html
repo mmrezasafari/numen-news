@@ -9,9 +9,9 @@
     <link rel="styleSheet" href="_sass/custom-styles.scss" />
   </head>
   <body>
-    <header class="container is-widescreen">
-      <nav class="navbar level pt-5 px-6">
-        <div class="level-left">
+    <header>
+      <nav class="navbar columns is-justify-content-space-between px-6 my-3">
+        <div class="column is-7 is-flex is-paddingless">
           <section class="navbar-brand" id="logo">
             <a class="navbar-item is-flex-direction-column" href="./index.html">
               <h1 class="title is-2 is-marginless has-text-grey-dark">
@@ -85,7 +85,7 @@
             </div>
           </sction>
         </div>
-        <div class="level-right">
+        <div class="column is-3 is-flex is-align-items-center is-paddingless">
           <section id="nav_search_input">
             <div class="field">
               <p class="control has-icons-left">
@@ -99,12 +99,11 @@
         </div>
       </nav>
     </header>
-    <main class="container is-widescreen">
-      <section class="mt-5 mb-3" id="price_slide">
-        <div class="columns level">
+    <main>
+      <section id="price_slide">
+        <div class="columns is-marginless" style="height: 5rem">
           <div
-            class="level-left is-flex is-justify-content-center column is-1 has-background-warning"
-            style="height: 5rem"
+            class="column is-1 is-flex is-justify-content-center is-align-items-center has-background-warning is-paddingless"
           >
             <div class="is-centered">
               <p
@@ -114,10 +113,7 @@
               </p>
             </div>
           </div>
-          <div
-            class="level-right column is-11 has-background-grey-light px-5 py-0"
-            style="height: 5rem"
-          >
+          <div class="column is-11 has-background-grey-light px-5 py-0">
             <div class="level is-gapless h-100">
               <div class="level-item is-flex is-flex-direction-column">
                 <p class="has-text-grey-darker has-text-weight-bold is-size-6">
@@ -179,8 +175,8 @@
           </div>
         </div>
       </section>
-      <section id="about">
-        <div class="columns level is-justify-content-center" id="about-bg">
+      <section class="is-flex is-align-items-center mb-3" id="about">
+        <div class="container level">
           <div class="column is-7 level">
             <div class="card has-background-white-ter is-marginless">
               <div class="card-header">
@@ -207,7 +203,7 @@
             </div>
           </div>
           <div
-            class="column is-4 is-flex is-justify-content-center"
+            class="column is-4 is-flex is-justify-content-end"
             id="about-news"
           >
             <section>
@@ -341,7 +337,9 @@
                         </div>
                       </div>
                     </div>
-                    <button class="button is-warning is-light">Read More</button>
+                    <button class="button is-warning is-light">
+                      Read More
+                    </button>
                   </article>
                 </li>
                 <li>
@@ -372,6 +370,79 @@
                 </li>
               </ul>
             </section>
+          </div>
+        </div>
+      </section>
+      <section class="container" id="infinity">
+        <div class="columns is-flex-direction-column">
+          <div class="column is-3 has-background-warning">
+            <h1 class="has-text-white title is-5 has-text-centered">
+              INFINITY GALAXY REPORTS
+            </h1>
+          </div>
+          <div class="column is-7 is-paddingless has-background-white">
+            <div class="columns">
+              <div class="column is-6">
+                <article class="level">
+                  <figure class="level-left">
+                    <img src="./crude-oil-barter.jpg" alt="News" />
+                  </figure>
+                  <div class="level-right is-flex-direction-column">
+                    <div class="card">
+                      <div
+                        class="card-content is-flex is-flex-direction-column is-justify-content-space-between p-3"
+                      >
+                        <h1 class="title is-5 is-marginless">
+                          There are two hard things in computer science
+                        </h1>
+                        <time>2020/2/2</time>
+                        <p class="subtitle is-6">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Culpa delectus autem eius hic voluptatem illo
+                          consectetur qui, sunt exercitationem incidunt optio,
+                          vel id quam nemo accusantium aliquid tempore vitae
+                          omnis.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="column is-6 pr-0">
+                <article class="level">
+                  <figure class="level-left">
+                    <img src="./crude-oil-barter.jpg" alt="News" />
+                  </figure>
+                  <div class="level-right is-flex-direction-column">
+                    <div class="card">
+                      <div
+                        class="card-content is-flex is-flex-direction-column is-justify-content-space-between p-3"
+                      >
+                        <h1 class="title is-5 is-marginless">
+                          There are two hard things in computer science
+                        </h1>
+                        <time>2020/2/2</time>
+                        <p class="subtitle is-6">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Culpa delectus autem eius hic voluptatem illo
+                          consectetur qui, sunt exercitationem incidunt optio,
+                          vel id quam nemo accusantium aliquid tempore vitae
+                          omnis.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <div class="py-3">
+                <button
+                  class="button is-warning"
+                  style="width: 3rem; height: 100%"
+                >
+                  a
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>

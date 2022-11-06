@@ -49,7 +49,7 @@
 /* 
 * ______________________________________________________________________ MAIN STYLE ______________________________________________________________________________ *
 */
-#about #about-bg {
+#about {
   min-height: 45rem;
   background-image: url("/crude-oil-barter.jpg");
   background-repeat: no-repeat;
@@ -58,23 +58,23 @@
   -webkit-filter: opacity(0.85);
   -moz-filter: opacity(0.85);
 }
-#about #about-bg .level {
+#about div .level {
   height: 100%;
 }
-#about #about-bg .level .card {
+#about div .level .card {
   width: 45rem;
   box-shadow: none;
 }
-#about #about-bg .level .card .card-header {
+#about div .level .card .card-header {
   box-shadow: none;
 }
-#about #about-bg .level .card .card-content p {
+#about div .level .card .card-content p {
   word-break: break-all;
 }
-#about #about-bg .level .card .card-footer {
+#about div .level .card .card-footer {
   border: none;
 }
-#about #about-bg .level .card .card-footer .button:hover {
+#about div .level .card .card-footer .button:hover {
   background-color: #F64225;
   color: white !important;
 }
@@ -125,12 +125,16 @@
   height: 100%;
   width: 12.33rem;
 }
+#about #about-news section ul li article div h1 {
+  color: #2B2D42;
+}
 #about #about-news section ul li article div p {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
   overflow: hidden;
+  color: #2B2D42;
 }
 #about #about-news section ul li article button {
   transition: opacity 0.5s linear;
@@ -144,6 +148,53 @@
   position: absolute;
   bottom: 0;
   left: 0;
+  border-radius: 0;
+}
+
+#infinity {
+  position: relative;
+  top: -145px;
+}
+#infinity article {
+  background-color: white;
+  width: 100%;
+  height: 12rem !important;
+  padding: 0.85rem;
+}
+#infinity article figure {
+  height: 100%;
+  width: 175px;
+}
+#infinity article figure img {
+  height: 100%;
+}
+#infinity article div {
+  height: 100%;
+  width: 16.5rem;
+  box-shadow: none;
+}
+#infinity article div h1 {
+  color: #2B2D42;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+#infinity article div time {
+  color: #2B2D42;
+  font-size: 15px;
+  font-weight: 500;
+}
+#infinity article div p {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #2B2D42;
+}
+#infinity button {
   border-radius: 0;
 }
 
