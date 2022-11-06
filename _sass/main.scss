@@ -1,29 +1,168 @@
 @charset "utf-8";
-
-// Customization
-
-// You can easily customize Bulma with your own variables.
-// Just uncomment the following block to see the result.
-
-/*
-// 1. Import the initial variables
+@use "variables";
 @import "../node_modules/bulma/sass/utilities/initial-variables";
 
-// 2. Set your own initial variables
-// Update the blue shade, used for links
-$blue: #06bcef;
-// Add pink and its invert
-$pink: #ff8080;
-$pink-invert: #fff;
-// Update the sans-serif font family
-$family-sans-serif: "Helvetica", "Arial", sans-serif;
+$warning: variables.$orange;
+$grey-light: variables.$grey-light;
+$grey-dark: variables.$grey-dark;
+$gre-darker: variables.$grey-darker;
+$white-ter: variables.$transparent;
+$fullhd: variables.$fullhd;
+$section-padding: 1rem 3rem;
 
-// 3. Set the derived variables
-// Use the new pink as the primary color
-$primary: $pink;
-$primary-invert: $pink-invert;
-
-// 4. Import the rest of Bulma
+/* 
+    * ________________________________________________________________________GLOBAL _______________________________________________________________________________ *
 */
+
+.w-100 {
+  width: 100% !important;
+}
+
+.h-100 {
+  height: 100% !important;
+}
+
+/*
+    * _____________________________________________________________________ HEADER STYLE __________________________________________________________________________ *
+*/
+
+.navbar-start {
+  a {
+    font-size: larger;
+  }
+  :hover {
+    color: variables.$orange !important;
+    background-color: transparent !important;
+  }
+  .navbar-dropdown {
+    background-color: white !important;
+  }
+}
+
+#nav_search_input {
+  input {
+    height: 3rem !important;
+    background-color: variables.$grey-light;
+    outline: none;
+    border: none;
+    box-shadow: none !important;
+  }
+  ::placeholder {
+    color: variables.$grey-dark;
+    font-weight: 500;
+    font-size: large;
+  }
+  :focus {
+    outline: none !important;
+  }
+}
+
+/* 
+* ______________________________________________________________________ MAIN STYLE ______________________________________________________________________________ *
+*/
+
+#about {
+  #about-bg {
+    min-height: 45rem;
+    background-image: url("/crude-oil-barter.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: opacity(0.85);
+    -webkit-filter: opacity(0.85);
+    -moz-filter: opacity(0.85);
+    .level {
+      height: 100%;
+      .card {
+        width: 45rem;
+        box-shadow: none;
+        .card-header {
+          box-shadow: none;
+        }
+        .card-content {
+          p {
+            word-break: break-all;
+          }
+        }
+        .card-footer {
+          border: none;
+          .button:hover {
+            background-color: $warning;
+            color: white !important;
+          }
+        }
+      }
+    }
+  }
+  #about-news {
+    section {
+      position: relative;
+      height: 38rem;
+      width: 25rem;
+      overflow: hidden;
+      ul {
+        position: relative;
+        list-style: none;
+        height: 10000%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        transition: all 750ms ease;
+        left: 0;
+        li {
+          position: relative;
+          margin: 10px 0;
+          article {
+            background-color: white;
+            width: 100%;
+            height: 12rem !important;
+            padding: 0.85rem;
+            figure {
+              height: 100%;
+              width: 175px;
+              img {
+                height: 100%;
+              }
+              time {
+                position: absolute;
+                top: 20px;
+                left: 7px;
+                background-color: $grey-light;
+                color: $gre-darker;
+                font-size: small;
+                padding: 6px 10px;
+                font-weight: 500;
+              }
+            }
+            div {
+              height: 100%;
+              width: 12.33rem;
+              p {
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                text-overflow: ellipsis;
+                overflow: hidden;
+              }
+            }
+            button {
+              transition: opacity 0.5s linear;
+              transform: translate(0);
+              opacity: 0;
+            }
+          }
+        }
+        :hover + button {
+          opacity: 1;
+          width: 100%;
+          height: 3rem;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          border-radius: 0;
+        }
+      }
+    }
+  }
+}
 
 @import "../node_modules/bulma/bulma";
