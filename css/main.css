@@ -206,7 +206,7 @@ main {
 }
 
 #main-section {
-  margin-top: 10rem;
+  margin-top: 9rem;
 }
 #main-section #bitumen-topics .level-right .card {
   width: 430px;
@@ -352,6 +352,7 @@ main {
   height: 170px !important;
   padding: 0.85rem;
   padding-bottom: 0;
+  padding-right: 0;
 }
 #main-section #bitumen-price-reports article figure {
   height: 100%;
@@ -362,7 +363,7 @@ main {
 }
 #main-section #bitumen-price-reports article div {
   height: 100%;
-  width: 245px;
+  width: 260px;
   box-shadow: none;
   border-radius: 0;
 }
@@ -386,6 +387,19 @@ main {
   text-overflow: ellipsis;
   overflow: hidden;
   color: #2B2D42;
+}
+#main-section #bitumen-grade p {
+  font-weight: 500;
+  color: #2B2D42;
+}
+#main-section #advertising {
+  min-height: 309px;
+  background-image: url("/crude-oil-barter.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: opacity(0.85);
+  -webkit-filter: opacity(0.85);
+  -moz-filter: opacity(0.85);
 }
 
 /*! bulma.io v0.9.3 | MIT License | github.com/jgthms/bulma */

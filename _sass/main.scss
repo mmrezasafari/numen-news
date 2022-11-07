@@ -223,7 +223,7 @@ main {
 }
 
 #main-section {
-  margin-top: 10rem;
+  margin-top: 9rem;
   #bitumen-topics {
     .level-right {
       .card {
@@ -382,6 +382,7 @@ main {
       height: 170px !important;
       padding: 0.85rem;
       padding-bottom: 0;
+      padding-right: 0;
       figure {
         height: 100%;
         width: 150px;
@@ -391,7 +392,7 @@ main {
       }
       div {
         height: 100%;
-        width: 245px;
+        width: 260px;
         box-shadow: none;
         border-radius: 0;
         h1 {
@@ -417,6 +418,23 @@ main {
         }
       }
     }
+  }
+  #bitumen-grade {
+    p {
+      font-weight: 500;
+      color: $gre-darker;
+
+    }
+  }
+
+  #advertising {
+    min-height: 309px;
+    background-image: url('/crude-oil-barter.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: opacity(0.85);
+    -webkit-filter: opacity(0.85);
+    -moz-filter: opacity(0.85);
   }
 }
 
