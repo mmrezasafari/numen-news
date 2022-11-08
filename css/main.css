@@ -55,12 +55,13 @@ main {
 
 #about {
   min-height: 45rem;
-  background-image: url("/crude-oil-barter.jpg");
+  background-image: url("/getty-oil-well-with-workers-sunset-silhouette.webp");
   background-repeat: no-repeat;
   background-size: cover;
-  filter: opacity(0.85);
-  -webkit-filter: opacity(0.85);
-  -moz-filter: opacity(0.85);
+  background-position: center;
+  filter: grayscale(50%) brightness(50%);
+  -webkit-filter: grayscale(50%) brightness(50%);
+  -moz-filter: grayscale(50%) brightness(50%);
 }
 #about div .level {
   height: 100%;
@@ -400,6 +401,69 @@ main {
   filter: opacity(0.85);
   -webkit-filter: opacity(0.85);
   -moz-filter: opacity(0.85);
+}
+#main-section #advertising button {
+  width: 150px;
+  height: 40px;
+  background-color: #2B2D42;
+  border: none;
+  position: relative;
+  bottom: 20px;
+  color: white;
+  transition: background-color 0.2s linear;
+  transform: translate(0);
+}
+#main-section #advertising :hover {
+  color: #2B2D42 !important;
+  background-color: white;
+  border-left: 5px solid #2B2D42;
+}
+#main-section #bitumart-article #bitumart-article-bg {
+  height: 15rem;
+  background-image: url("/crude-oil-barter.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: opacity(0.85);
+  -webkit-filter: opacity(0.85);
+  -moz-filter: opacity(0.85);
+}
+#main-section #bitumart-article article {
+  background-color: white;
+  height: 180px !important;
+  padding: 0.85rem;
+}
+#main-section #bitumart-article article figure {
+  height: 150px;
+  width: 150px;
+}
+#main-section #bitumart-article article figure img {
+  height: 100%;
+}
+#main-section #bitumart-article article div {
+  height: 100%;
+  width: 235px;
+  box-shadow: none;
+}
+#main-section #bitumart-article article div h1 {
+  color: #2B2D42;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+#main-section #bitumart-article article div time {
+  color: #2B2D42;
+  font-size: 13px;
+  font-weight: 700;
+}
+#main-section #bitumart-article article div a {
+  direction: rtl;
+}
+#main-section #bitumart-article .items-container {
+  position: relative;
+  bottom: -15px;
 }
 
 /*! bulma.io v0.9.3 | MIT License | github.com/jgthms/bulma */

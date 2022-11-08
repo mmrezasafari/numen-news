@@ -66,12 +66,13 @@ main {
 
 #about {
   min-height: 45rem;
-  background-image: url('/crude-oil-barter.jpg');
+  background-image: url('/getty-oil-well-with-workers-sunset-silhouette.webp');
   background-repeat: no-repeat;
   background-size: cover;
-  filter: opacity(0.85);
-  -webkit-filter: opacity(0.85);
-  -moz-filter: opacity(0.85);
+  background-position: center;
+  filter: grayscale(50%) brightness(50%);
+  -webkit-filter: grayscale(50%) brightness(50%);
+  -moz-filter: grayscale(50%) brightness(50%);
   div {
     .level {
       height: 100%;
@@ -423,7 +424,6 @@ main {
     p {
       font-weight: 500;
       color: $gre-darker;
-
     }
   }
 
@@ -435,6 +435,75 @@ main {
     filter: opacity(0.85);
     -webkit-filter: opacity(0.85);
     -moz-filter: opacity(0.85);
+  }
+
+  #advertising {
+    button {
+      width: 150px;
+      height: 40px;
+      background-color: $gre-darker;
+      border: none;
+      position: relative;
+      bottom: 20px;
+      color: white;
+      transition: background-color 0.2s linear;
+      transform: translate(0);
+    }
+    :hover {
+      color: $gre-darker !important;
+      background-color: white;
+      border-left: 5px solid $gre-darker;
+    }
+  }
+
+  #bitumart-article {
+    #bitumart-article-bg {
+      height: 15rem;
+      background-image: url('/crude-oil-barter.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      filter: opacity(0.85);
+      -webkit-filter: opacity(0.85);
+      -moz-filter: opacity(0.85);
+    }
+    article {
+      background-color: white;
+      height: 180px !important;
+      padding: 0.85rem;
+      figure {
+        height: 150px;
+        width: 150px;
+        img {
+          height: 100%;
+        }
+      }
+      div {
+        height: 100%;
+        width: 235px;
+        box-shadow: none;
+        h1 {
+          color: $gre-darker;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+        time {
+          color: $gre-darker;
+          font-size: 13px;
+          font-weight: 700;
+        }
+        a {
+          direction: rtl;
+        }
+      }
+    }
+    .items-container {
+      position: relative;
+      bottom: -15px;
+    }
   }
 }
 
