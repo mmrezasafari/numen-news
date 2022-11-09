@@ -70,9 +70,6 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  filter: grayscale(50%) brightness(50%);
-  -webkit-filter: grayscale(50%) brightness(50%);
-  -moz-filter: grayscale(50%) brightness(50%);
   div {
     .level {
       height: 100%;
@@ -90,7 +87,9 @@ main {
           border: none;
           .button:hover {
             background-color: $warning;
-            color: white !important;
+            span {
+              color: white !important;
+            }
           }
         }
       }
@@ -151,22 +150,39 @@ main {
               }
             }
             button {
-              transition: opacity 0.5s linear;
-              transform: translate(0);
-              opacity: 0;
+              width: 100%;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              border-radius: 0;
+              transform: translateY(50px);
+              transition: 0.3s;
+              font-weight: 500;
             }
           }
         }
-        :hover + button {
-          opacity: 1;
-          width: 100%;
-          height: 3rem;
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          border-radius: 0;
+        :hover button {
+          transform: translateY(0);
         }
       }
+    }
+    .last-btn {
+      width: 95%;
+      background-color: transparent;
+      border: none;
+      border-top: 4px solid $warning;
+      border-radius: 0;
+      color: white;
+      -webkit-transition: background-color 0.3s ease-out;
+      -moz-transition: background-color 0.3s ease-out;
+      -o-transition: background-color 0.3s ease-out;
+      transition: background-color 0.3s ease-out;
+    }
+    .last-btn:hover {
+      background-color: $warning;
+    }
+    .last-btn-span {
+      transform: rotate(90deg);
     }
   }
 }
@@ -285,9 +301,25 @@ main {
         background-image: url('/crude-oil-barter.jpg');
         background-repeat: no-repeat;
         background-size: cover;
-        filter: opacity(0.85);
-        -webkit-filter: opacity(0.85);
-        -moz-filter: opacity(0.85);
+        h1 {
+          height: 100%;
+          background-color: rgb(10 10 10 / 49%);
+          display: flex;
+          align-items: flex-end;
+        }
+      }
+      :hover h1 {
+        height: 30%;
+        animation: example 500ms ease-in-out forwards;
+      }
+      @keyframes example {
+        0% {
+          height: 100%;
+        }
+        100% {
+          height: 31%;
+          background-color: $warning;
+        }
       }
     }
   }
@@ -469,7 +501,6 @@ main {
     }
     article {
       background-color: white;
-      height: 180px !important;
       padding: 0.85rem;
       figure {
         height: 150px;
@@ -502,9 +533,86 @@ main {
     }
     .items-container {
       position: relative;
-      bottom: -15px;
+      bottom: -35px;
     }
   }
+  #oil-price-news {
+    margin: 6rem 0;
+    article {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      figure {
+        width: 100%;
+        align-self: center;
+      }
+      div {
+        width: 100%;
+        margin-top: 15px;
+        background-color: $grey-light;
+        padding: 10px;
+        p {
+          color: $gre-darker;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+      }
+    }
+    :hover > h1 {
+      color: $warning;
+    }
+    button:hover {
+      background-color: $gre-darker;
+    }
+  }
+}
+
+/*
+ ******************************************************* FOOTER STYLE **********************************************************
+*/
+
+footer {
+  background-color: $gre-darker;
+}
+
+#bitumen-footer-info {
+  .svg-container{ 
+    a {
+      svg{
+        fill: white;
+      }
+    }
+  }
+}
+
+.link-container {
+  height: 100%;
+  div {
+    a {
+      color: white;
+      font-weight: 500;
+    }
+    :hover {
+      color: $warning;
+    }
+  }
+}
+
+.email-submit{
+  input{
+    width: 100%;
+    border-radius: 0;
+  }
+  button {
+    float: right;
+  }
+}
+
+.copy-right {
+  border-top: 2px solid $grey-dark;
 }
 
 @import '../node_modules/bulma/bulma';
