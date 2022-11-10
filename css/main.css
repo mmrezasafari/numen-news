@@ -53,6 +53,70 @@ main {
   background-color: #F6F4F0;
 }
 
+#price_slide .price-container {
+  overflow: hidden;
+  width: 230%;
+}
+#price_slide .price-container ul {
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#price_slide .price-container ul li {
+  animation: price-slide 70s infinite;
+}
+
+@keyframes price-slide {
+  5% {
+    transform: translateX(0%);
+  }
+  10% {
+    transform: translateX(0%);
+  }
+  15% {
+    transform: translateX(-100%);
+  }
+  20% {
+    transform: translateX(-100%);
+  }
+  30% {
+    transform: translateX(-200%);
+  }
+  35% {
+    transform: translateX(-200%);
+  }
+  40% {
+    transform: translateX(-300%);
+  }
+  45% {
+    transform: translateX(-300%);
+  }
+  50% {
+    transform: translateX(-400%);
+  }
+  55% {
+    transform: translateX(-400%);
+  }
+  60% {
+    transform: translateX(-500%);
+  }
+  65% {
+    transform: translateX(-500%);
+  }
+  70% {
+    transform: translateX(-600%);
+  }
+  75% {
+    transform: translateX(-600%);
+  }
+  80% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
 #about {
   min-height: 45rem;
   background-image: url("/getty-oil-well-with-workers-sunset-silhouette.webp");
@@ -87,7 +151,7 @@ main {
   height: 616px;
   overflow: hidden;
 }
-#about #about-news section ul {
+#about #about-news section .about-news-slider {
   position: relative;
   list-style: none;
   height: 10000%;
@@ -97,23 +161,23 @@ main {
   transition: all 750ms ease;
   left: 0;
 }
-#about #about-news section ul li {
+#about #about-news section .about-news-slider .about-news-slide {
   position: relative;
   margin: 10px 0;
 }
-#about #about-news section ul li article {
+#about #about-news section .about-news-slider .about-news-slide article {
   background-color: white;
   height: 192px !important;
   padding: 15px;
 }
-#about #about-news section ul li article figure {
+#about #about-news section .about-news-slider .about-news-slide article figure {
   height: 100%;
   width: 175px;
 }
-#about #about-news section ul li article figure img {
+#about #about-news section .about-news-slider .about-news-slide article figure img {
   height: 100%;
 }
-#about #about-news section ul li article figure time {
+#about #about-news section .about-news-slider .about-news-slide article figure time {
   position: absolute;
   top: 20px;
   left: 7px;
@@ -123,14 +187,14 @@ main {
   padding: 6px 10px;
   font-weight: 500;
 }
-#about #about-news section ul li article div {
+#about #about-news section .about-news-slider .about-news-slide article div {
   height: 100%;
   width: 205px;
 }
-#about #about-news section ul li article div h1 {
+#about #about-news section .about-news-slider .about-news-slide article div h1 {
   color: #2B2D42;
 }
-#about #about-news section ul li article div p {
+#about #about-news section .about-news-slider .about-news-slide article div p {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -138,7 +202,7 @@ main {
   overflow: hidden;
   color: #2B2D42;
 }
-#about #about-news section ul li article button {
+#about #about-news section .about-news-slider .about-news-slide article button {
   width: 100%;
   position: absolute;
   bottom: 0;
@@ -148,7 +212,7 @@ main {
   transition: 0.3s;
   font-weight: 500;
 }
-#about #about-news section ul :hover button {
+#about #about-news section .about-news-slider :hover button {
   transform: translateY(0);
 }
 #about #about-news .last-btn {
@@ -530,7 +594,7 @@ main {
 }
 
 /*
- ******************************************************* FOOTER STYLE **********************************************************
+ * *************************************************************************** FOOTER STYLE **************************************************************************
 */
 footer {
   background-color: #2B2D42;

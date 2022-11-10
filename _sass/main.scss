@@ -1,6 +1,6 @@
 @charset "utf-8";
-@use 'variables';
-@import '../node_modules/bulma/sass/utilities/initial-variables';
+@use "variables";
+@import "../node_modules/bulma/sass/utilities/initial-variables";
 
 $warning: variables.$orange;
 $grey-light: variables.$grey-light;
@@ -64,9 +64,76 @@ main {
   background-color: $grey-light;
 }
 
+#price_slide {
+  .price-container {
+    overflow: hidden;
+    width: 230%;
+    ul {
+      position: relative;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      li {
+        animation: price-slide 70s infinite;
+      }
+    }
+  }
+}
+
+@keyframes price-slide {
+  5% {
+    transform: translateX(0%);
+  }
+  10% {
+    transform: translateX(0%);
+  }
+  15% {
+    transform: translateX(-100%);
+  }
+  20% {
+    transform: translateX(-100%);
+  }
+  30% {
+    transform: translateX(-200%);
+  }
+  35% {
+    transform: translateX(-200%);
+  }
+  40% {
+    transform: translateX(-300%);
+  }
+  45% {
+    transform: translateX(-300%);
+  }
+  50% {
+    transform: translateX(-400%);
+  }
+  55% {
+    transform: translateX(-400%);
+  }
+  60% {
+    transform: translateX(-500%);
+  }
+  65% {
+    transform: translateX(-500%);
+  }
+  70% {
+    transform: translateX(-600%);
+  }
+  75% {
+    transform: translateX(-600%);
+  }
+  80% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
 #about {
   min-height: 45rem;
-  background-image: url('/getty-oil-well-with-workers-sunset-silhouette.webp');
+  background-image: url("/getty-oil-well-with-workers-sunset-silhouette.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -101,7 +168,7 @@ main {
       width: 400px;
       height: 616px;
       overflow: hidden;
-      ul {
+      .about-news-slider {
         position: relative;
         list-style: none;
         height: 10000%;
@@ -110,7 +177,8 @@ main {
         margin: 0;
         transition: all 750ms ease;
         left: 0;
-        li {
+
+        .about-news-slide {
           position: relative;
           margin: 10px 0;
           article {
@@ -298,7 +366,7 @@ main {
       height: 100%;
       .event {
         min-height: 17rem;
-        background-image: url('/crude-oil-barter.jpg');
+        background-image: url("/crude-oil-barter.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         h1 {
@@ -461,7 +529,7 @@ main {
 
   #advertising {
     min-height: 309px;
-    background-image: url('/crude-oil-barter.jpg');
+    background-image: url("/crude-oil-barter.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     filter: opacity(0.85);
@@ -491,7 +559,7 @@ main {
   #bitumart-article {
     #bitumart-article-bg {
       height: 15rem;
-      background-image: url('/crude-oil-barter.jpg');
+      background-image: url("/crude-oil-barter.jpg");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -571,7 +639,7 @@ main {
 }
 
 /*
- ******************************************************* FOOTER STYLE **********************************************************
+ * *************************************************************************** FOOTER STYLE **************************************************************************
 */
 
 footer {
@@ -579,9 +647,9 @@ footer {
 }
 
 #bitumen-footer-info {
-  .svg-container{ 
+  .svg-container {
     a {
-      svg{
+      svg {
         fill: white;
       }
     }
@@ -601,8 +669,8 @@ footer {
   }
 }
 
-.email-submit{
-  input{
+.email-submit {
+  input {
     width: 100%;
     border-radius: 0;
   }
@@ -615,4 +683,4 @@ footer {
   border-top: 2px solid $grey-dark;
 }
 
-@import '../node_modules/bulma/bulma';
+@import "../node_modules/bulma/bulma";
