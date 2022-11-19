@@ -21,6 +21,26 @@ $section-padding: 1rem 3rem;
   height: 100% !important;
 }
 
+.wrapper {
+  display: grid;
+  grid-template-areas:
+    "header header header header header header"
+    "main main main main main main"
+    "footer footer footer footer footer footer";
+
+  header {
+    grid-area: header;
+  }
+
+  main {
+    grid-area: main;
+  }
+
+  footer {
+    grid-area: footer;
+  }
+}
+
 /*
     * _____________________________________________________________________ HEADER STYLE __________________________________________________________________________ *
 */
@@ -38,7 +58,7 @@ $section-padding: 1rem 3rem;
   }
 }
 
-#nav_search_input {
+.nav_search_input {
   input {
     height: 3rem !important;
     background-color: variables.$grey-light;
@@ -64,7 +84,7 @@ main {
   background-color: $grey-light;
 }
 
-#price_slide {
+.price_slide {
   .price-container {
     overflow: hidden;
     width: 230%;
@@ -131,7 +151,7 @@ main {
   }
 }
 
-#about {
+.about {
   min-height: 45rem;
   background-image: url("/getty-oil-well-with-workers-sunset-silhouette.webp");
   background-repeat: no-repeat;
@@ -162,7 +182,7 @@ main {
       }
     }
   }
-  #about-news {
+  .about-news {
     section {
       position: relative;
       width: 400px;
@@ -177,7 +197,6 @@ main {
         margin: 0;
         transition: all 750ms ease;
         left: 0;
-
         .about-news-slide {
           position: relative;
           margin: 10px 0;
@@ -255,7 +274,7 @@ main {
   }
 }
 
-#infinity {
+.infinity {
   position: relative;
   top: 164px;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
@@ -307,9 +326,9 @@ main {
   }
 }
 
-#main-section {
+.main-section {
   margin-top: 9rem;
-  #bitumen-topics {
+  .bitumen-topics {
     .level-right {
       .card {
         width: 430px;
@@ -361,8 +380,8 @@ main {
     background-color: $warning;
     color: white !important;
   }
-  #events-container {
-    #events {
+  .events-container {
+    .events {
       height: 100%;
       .event {
         min-height: 17rem;
@@ -392,7 +411,7 @@ main {
     }
   }
 
-  #bitumen-news {
+  .bitumen-news {
     .is-12 {
       box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
       -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
@@ -442,7 +461,7 @@ main {
       border-radius: 0;
     }
   }
-  #argus-media-news {
+  .argus-media-news {
     .item {
       width: 290px;
       height: 300px;
@@ -478,7 +497,7 @@ main {
       float: right;
     }
   }
-  #bitumen-price-reports {
+  .bitumen-price-reports {
     article {
       height: 170px !important;
       padding: 0.85rem;
@@ -520,14 +539,14 @@ main {
       }
     }
   }
-  #bitumen-grade {
+  .bitumen-grade {
     p {
       font-weight: 500;
       color: $gre-darker;
     }
   }
 
-  #advertising {
+  .advertising {
     min-height: 309px;
     background-image: url("/crude-oil-barter.jpg");
     background-repeat: no-repeat;
@@ -537,7 +556,7 @@ main {
     -moz-filter: opacity(0.85);
   }
 
-  #advertising {
+  .advertising {
     button {
       width: 150px;
       height: 40px;
@@ -556,8 +575,8 @@ main {
     }
   }
 
-  #bitumart-article {
-    #bitumart-article-bg {
+  .bitumart-article {
+    .bitumart-article-bg {
       height: 15rem;
       background-image: url("/crude-oil-barter.jpg");
       background-repeat: no-repeat;
@@ -604,7 +623,7 @@ main {
       bottom: -35px;
     }
   }
-  #oil-price-news {
+  .oil-price-news {
     margin: 6rem 0;
     article {
       display: flex;
@@ -646,7 +665,7 @@ footer {
   background-color: $gre-darker;
 }
 
-#bitumen-footer-info {
+.bitumen-footer-info {
   .svg-container {
     a {
       svg {

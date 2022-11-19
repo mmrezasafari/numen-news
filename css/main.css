@@ -16,6 +16,20 @@
   height: 100% !important;
 }
 
+.wrapper {
+  display: grid;
+  grid-template-areas: "header header header header header header" "main main main main main main" "footer footer footer footer footer footer";
+}
+.wrapper header {
+  grid-area: header;
+}
+.wrapper main {
+  grid-area: main;
+}
+.wrapper footer {
+  grid-area: footer;
+}
+
 /*
     * _____________________________________________________________________ HEADER STYLE __________________________________________________________________________ *
 */
@@ -30,19 +44,19 @@
   background-color: white !important;
 }
 
-#nav_search_input input {
+.nav_search_input input {
   height: 3rem !important;
   background-color: #F6F4F0;
   outline: none;
   border: none;
   box-shadow: none !important;
 }
-#nav_search_input ::placeholder {
+.nav_search_input ::placeholder {
   color: #A5A4AA;
   font-weight: 500;
   font-size: large;
 }
-#nav_search_input :focus {
+.nav_search_input :focus {
   outline: none !important;
 }
 
@@ -53,17 +67,17 @@ main {
   background-color: #F6F4F0;
 }
 
-#price_slide .price-container {
+.price_slide .price-container {
   overflow: hidden;
   width: 230%;
 }
-#price_slide .price-container ul {
+.price_slide .price-container ul {
   position: relative;
   list-style: none;
   padding: 0;
   margin: 0;
 }
-#price_slide .price-container ul li {
+.price_slide .price-container ul li {
   animation: price-slide 70s infinite;
 }
 
@@ -117,41 +131,41 @@ main {
     transform: translateX(0%);
   }
 }
-#about {
+.about {
   min-height: 45rem;
   background-image: url("/getty-oil-well-with-workers-sunset-silhouette.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-#about div .level {
+.about div .level {
   height: 100%;
 }
-#about div .level .card {
+.about div .level .card {
   box-shadow: none;
 }
-#about div .level .card .card-header {
+.about div .level .card .card-header {
   box-shadow: none;
 }
-#about div .level .card .card-content p {
+.about div .level .card .card-content p {
   word-break: break-all;
 }
-#about div .level .card .card-footer {
+.about div .level .card .card-footer {
   border: none;
 }
-#about div .level .card .card-footer .button:hover {
+.about div .level .card .card-footer .button:hover {
   background-color: #F64225;
 }
-#about div .level .card .card-footer .button:hover span {
+.about div .level .card .card-footer .button:hover span {
   color: white !important;
 }
-#about #about-news section {
+.about .about-news section {
   position: relative;
   width: 400px;
   height: 616px;
   overflow: hidden;
 }
-#about #about-news section .about-news-slider {
+.about .about-news section .about-news-slider {
   position: relative;
   list-style: none;
   height: 10000%;
@@ -161,23 +175,23 @@ main {
   transition: all 750ms ease;
   left: 0;
 }
-#about #about-news section .about-news-slider .about-news-slide {
+.about .about-news section .about-news-slider .about-news-slide {
   position: relative;
   margin: 10px 0;
 }
-#about #about-news section .about-news-slider .about-news-slide article {
+.about .about-news section .about-news-slider .about-news-slide article {
   background-color: white;
   height: 192px !important;
   padding: 15px;
 }
-#about #about-news section .about-news-slider .about-news-slide article figure {
+.about .about-news section .about-news-slider .about-news-slide article figure {
   height: 100%;
   width: 175px;
 }
-#about #about-news section .about-news-slider .about-news-slide article figure img {
+.about .about-news section .about-news-slider .about-news-slide article figure img {
   height: 100%;
 }
-#about #about-news section .about-news-slider .about-news-slide article figure time {
+.about .about-news section .about-news-slider .about-news-slide article figure time {
   position: absolute;
   top: 20px;
   left: 7px;
@@ -187,14 +201,14 @@ main {
   padding: 6px 10px;
   font-weight: 500;
 }
-#about #about-news section .about-news-slider .about-news-slide article div {
+.about .about-news section .about-news-slider .about-news-slide article div {
   height: 100%;
   width: 205px;
 }
-#about #about-news section .about-news-slider .about-news-slide article div h1 {
+.about .about-news section .about-news-slider .about-news-slide article div h1 {
   color: #2B2D42;
 }
-#about #about-news section .about-news-slider .about-news-slide article div p {
+.about .about-news section .about-news-slider .about-news-slide article div p {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -202,7 +216,7 @@ main {
   overflow: hidden;
   color: #2B2D42;
 }
-#about #about-news section .about-news-slider .about-news-slide article button {
+.about .about-news section .about-news-slider .about-news-slide article button {
   width: 100%;
   position: absolute;
   bottom: 0;
@@ -212,10 +226,10 @@ main {
   transition: 0.3s;
   font-weight: 500;
 }
-#about #about-news section .about-news-slider :hover button {
+.about .about-news section .about-news-slider :hover button {
   transform: translateY(0);
 }
-#about #about-news .last-btn {
+.about .about-news .last-btn {
   width: 95%;
   background-color: transparent;
   border: none;
@@ -227,39 +241,39 @@ main {
   -o-transition: background-color 0.3s ease-out;
   transition: background-color 0.3s ease-out;
 }
-#about #about-news .last-btn:hover {
+.about .about-news .last-btn:hover {
   background-color: #F64225;
 }
-#about #about-news .last-btn-span {
+.about .about-news .last-btn-span {
   transform: rotate(90deg);
 }
 
-#infinity {
+.infinity {
   position: relative;
   top: 164px;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
   -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
 }
-#infinity article {
+.infinity article {
   background-color: white;
   width: 100%;
   height: 180px !important;
   padding: 0.85rem;
 }
-#infinity article figure {
+.infinity article figure {
   height: 150px;
   width: 150px;
 }
-#infinity article figure img {
+.infinity article figure img {
   height: 100%;
 }
-#infinity article div {
+.infinity article div {
   height: 100%;
   width: 225px;
   box-shadow: none;
 }
-#infinity article div h1 {
+.infinity article div h1 {
   color: #2B2D42;
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -267,12 +281,12 @@ main {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-#infinity article div time {
+.infinity article div time {
   color: #2B2D42;
   font-size: 13px;
   font-weight: 700;
 }
-#infinity article div p {
+.infinity article div p {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -280,33 +294,33 @@ main {
   overflow: hidden;
   color: #2B2D42;
 }
-#infinity button {
+.infinity button {
   width: 3rem;
   height: 100%;
   border-radius: 0;
 }
 
-#main-section {
+.main-section {
   margin-top: 9rem;
 }
-#main-section #bitumen-topics .level-right .card {
+.main-section .bitumen-topics .level-right .card {
   width: 430px;
   background-color: transparent;
   box-shadow: none;
   border-radius: 0;
 }
-#main-section #bitumen-topics .level-right .card .card-content {
+.main-section .bitumen-topics .level-right .card .card-content {
   height: 150px;
 }
-#main-section #bitumen-topics .level-right .card .card-content div .dot {
+.main-section .bitumen-topics .level-right .card .card-content div .dot {
   width: 35px;
   height: 10px;
   background-color: #F64225;
 }
-#main-section #bitumen-topics .level-right .card .card-content div div {
+.main-section .bitumen-topics .level-right .card .card-content div div {
   height: 120px;
 }
-#main-section #bitumen-topics .level-right .card .card-content div div h1 {
+.main-section .bitumen-topics .level-right .card .card-content div div h1 {
   color: #2B2D42;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -314,12 +328,12 @@ main {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-#main-section #bitumen-topics .level-right .card .card-content div time {
+.main-section .bitumen-topics .level-right .card .card-content div time {
   color: #2B2D42;
   font-size: 13px;
   font-weight: 700;
 }
-#main-section #bitumen-topics .level-right .card .card-content div p {
+.main-section .bitumen-topics .level-right .card .card-content div p {
   color: #2B2D42;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -327,30 +341,30 @@ main {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-#main-section button {
+.main-section button {
   width: 100%;
   border-radius: 0;
 }
-#main-section button:hover {
+.main-section button:hover {
   background-color: #F64225;
   color: white !important;
 }
-#main-section #events-container #events {
+.main-section .events-container .events {
   height: 100%;
 }
-#main-section #events-container #events .event {
+.main-section .events-container .events .event {
   min-height: 17rem;
   background-image: url("/crude-oil-barter.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
-#main-section #events-container #events .event h1 {
+.main-section .events-container .events .event h1 {
   height: 100%;
   background-color: rgba(10, 10, 10, 0.49);
   display: flex;
   align-items: flex-end;
 }
-#main-section #events-container #events :hover h1 {
+.main-section .events-container .events :hover h1 {
   height: 30%;
   animation: example 500ms ease-in-out forwards;
 }
@@ -363,29 +377,29 @@ main {
     background-color: #F64225;
   }
 }
-#main-section #bitumen-news .is-12 {
+.main-section .bitumen-news .is-12 {
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
   -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
 }
-#main-section #bitumen-news article {
+.main-section .bitumen-news article {
   background-color: white;
   height: 180px !important;
   padding: 0.85rem;
 }
-#main-section #bitumen-news article figure {
+.main-section .bitumen-news article figure {
   height: 150px;
   width: 150px;
 }
-#main-section #bitumen-news article figure img {
+.main-section .bitumen-news article figure img {
   height: 100%;
 }
-#main-section #bitumen-news article div {
+.main-section .bitumen-news article div {
   height: 100%;
   width: 225px;
   box-shadow: none;
 }
-#main-section #bitumen-news article div h1 {
+.main-section .bitumen-news article div h1 {
   color: #2B2D42;
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -393,12 +407,12 @@ main {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-#main-section #bitumen-news article div time {
+.main-section .bitumen-news article div time {
   color: #2B2D42;
   font-size: 13px;
   font-weight: 700;
 }
-#main-section #bitumen-news article div p {
+.main-section .bitumen-news article div p {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -406,12 +420,12 @@ main {
   overflow: hidden;
   color: #2B2D42;
 }
-#main-section #bitumen-news button {
+.main-section .bitumen-news button {
   width: 3rem;
   height: 100%;
   border-radius: 0;
 }
-#main-section #argus-media-news .item {
+.main-section .argus-media-news .item {
   width: 290px;
   height: 300px;
   display: flex;
@@ -424,12 +438,12 @@ main {
   -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
   border-bottom: 4px solid #F64225;
 }
-#main-section #argus-media-news .item time {
+.main-section .argus-media-news .item time {
   color: #F64225;
   font: 13px;
   font-weight: 500;
 }
-#main-section #argus-media-news .item p {
+.main-section .argus-media-news .item p {
   word-break: break-all;
   color: #2B2D42;
   display: -webkit-box;
@@ -438,33 +452,33 @@ main {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-#main-section #argus-media-news :hover > .hovered {
+.main-section .argus-media-news :hover > .hovered {
   color: #F64225;
 }
-#main-section #argus-media-news button {
+.main-section .argus-media-news button {
   width: 32%;
   float: right;
 }
-#main-section #bitumen-price-reports article {
+.main-section .bitumen-price-reports article {
   height: 170px !important;
   padding: 0.85rem;
   padding-bottom: 0;
   padding-right: 0;
 }
-#main-section #bitumen-price-reports article figure {
+.main-section .bitumen-price-reports article figure {
   height: 100%;
   width: 150px;
 }
-#main-section #bitumen-price-reports article figure img {
+.main-section .bitumen-price-reports article figure img {
   height: 100%;
 }
-#main-section #bitumen-price-reports article div {
+.main-section .bitumen-price-reports article div {
   height: 100%;
   width: 260px;
   box-shadow: none;
   border-radius: 0;
 }
-#main-section #bitumen-price-reports article div h1 {
+.main-section .bitumen-price-reports article div h1 {
   color: #2B2D42;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -472,12 +486,12 @@ main {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-#main-section #bitumen-price-reports article div time {
+.main-section .bitumen-price-reports article div time {
   color: #2B2D42;
   font-size: 13px;
   font-weight: 700;
 }
-#main-section #bitumen-price-reports article div p {
+.main-section .bitumen-price-reports article div p {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -485,11 +499,11 @@ main {
   overflow: hidden;
   color: #2B2D42;
 }
-#main-section #bitumen-grade p {
+.main-section .bitumen-grade p {
   font-weight: 500;
   color: #2B2D42;
 }
-#main-section #advertising {
+.main-section .advertising {
   min-height: 309px;
   background-image: url("/crude-oil-barter.jpg");
   background-repeat: no-repeat;
@@ -498,7 +512,7 @@ main {
   -webkit-filter: opacity(0.85);
   -moz-filter: opacity(0.85);
 }
-#main-section #advertising button {
+.main-section .advertising button {
   width: 150px;
   height: 40px;
   background-color: #2B2D42;
@@ -509,12 +523,12 @@ main {
   transition: background-color 0.2s linear;
   transform: translate(0);
 }
-#main-section #advertising :hover {
+.main-section .advertising :hover {
   color: #2B2D42 !important;
   background-color: white;
   border-left: 5px solid #2B2D42;
 }
-#main-section #bitumart-article #bitumart-article-bg {
+.main-section .bitumart-article .bitumart-article-bg {
   height: 15rem;
   background-image: url("/crude-oil-barter.jpg");
   background-repeat: no-repeat;
@@ -524,23 +538,23 @@ main {
   -webkit-filter: opacity(0.85);
   -moz-filter: opacity(0.85);
 }
-#main-section #bitumart-article article {
+.main-section .bitumart-article article {
   background-color: white;
   padding: 0.85rem;
 }
-#main-section #bitumart-article article figure {
+.main-section .bitumart-article article figure {
   height: 150px;
   width: 150px;
 }
-#main-section #bitumart-article article figure img {
+.main-section .bitumart-article article figure img {
   height: 100%;
 }
-#main-section #bitumart-article article div {
+.main-section .bitumart-article article div {
   height: 100%;
   width: 235px;
   box-shadow: none;
 }
-#main-section #bitumart-article article div h1 {
+.main-section .bitumart-article article div h1 {
   color: #2B2D42;
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -548,37 +562,37 @@ main {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-#main-section #bitumart-article article div time {
+.main-section .bitumart-article article div time {
   color: #2B2D42;
   font-size: 13px;
   font-weight: 700;
 }
-#main-section #bitumart-article article div a {
+.main-section .bitumart-article article div a {
   direction: rtl;
 }
-#main-section #bitumart-article .items-container {
+.main-section .bitumart-article .items-container {
   position: relative;
   bottom: -35px;
 }
-#main-section #oil-price-news {
+.main-section .oil-price-news {
   margin: 6rem 0;
 }
-#main-section #oil-price-news article {
+.main-section .oil-price-news article {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-#main-section #oil-price-news article figure {
+.main-section .oil-price-news article figure {
   width: 100%;
   align-self: center;
 }
-#main-section #oil-price-news article div {
+.main-section .oil-price-news article div {
   width: 100%;
   margin-top: 15px;
   background-color: #F6F4F0;
   padding: 10px;
 }
-#main-section #oil-price-news article div p {
+.main-section .oil-price-news article div p {
   color: #2B2D42;
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -586,10 +600,10 @@ main {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-#main-section #oil-price-news :hover > h1 {
+.main-section .oil-price-news :hover > h1 {
   color: #F64225;
 }
-#main-section #oil-price-news button:hover {
+.main-section .oil-price-news button:hover {
   background-color: #2B2D42;
 }
 
@@ -600,7 +614,7 @@ footer {
   background-color: #2B2D42;
 }
 
-#bitumen-footer-info .svg-container a svg {
+.bitumen-footer-info .svg-container a svg {
   fill: white;
 }
 
