@@ -2,7 +2,7 @@
 @use "variables";
 @import "../node_modules/bulma/sass/utilities/initial-variables";
 
-$warning: variables.$orange;
+$black-ter: variables.$orange;
 $grey-light: variables.$grey-light;
 $grey-dark: variables.$grey-dark;
 $gre-darker: variables.$grey-darker;
@@ -54,7 +54,7 @@ $section-padding: 1rem 3rem;
     background-color: transparent !important;
   }
   .navbar-dropdown {
-    background-color: white !important;
+    background-color: rgb(255, 255, 255) !important;
   }
 }
 
@@ -76,18 +76,10 @@ $section-padding: 1rem 3rem;
   }
 }
 
-/* 
-* ______________________________________________________________________ MAIN STYLE ______________________________________________________________________________ *
-*/
-
-main {
-  background-color: $grey-light;
-}
-
 .price_slide {
   .price-container {
     overflow: hidden;
-    width: 230%;
+    width: 230% !important;
     ul {
       position: relative;
       list-style: none;
@@ -151,274 +143,221 @@ main {
   }
 }
 
-.about {
-  min-height: 45rem;
-  background-image: url("/getty-oil-well-with-workers-sunset-silhouette.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  div {
-    .level {
-      height: 100%;
-      .card {
-        box-shadow: none;
-        .card-header {
+/* 
+* ______________________________________________________________________ MAIN STYLE ______________________________________________________________________________ *
+*/
+
+main {
+  background-color: $grey-light;
+
+  .see_more_button {
+    background-color: $black-ter;
+    border: none !important;
+  }
+  .see_more_button:hover {
+    background-color: $black-ter;
+    color: white;
+  }
+
+  .price_slide {
+    .price-container {
+      overflow: hidden;
+      width: 230%;
+      ul {
+        position: relative;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+          animation: price-slide 70s infinite;
+        }
+      }
+    }
+  }
+
+  @keyframes price-slide {
+    5% {
+      transform: translateX(0%);
+    }
+    10% {
+      transform: translateX(0%);
+    }
+    15% {
+      transform: translateX(-100%);
+    }
+    20% {
+      transform: translateX(-100%);
+    }
+    30% {
+      transform: translateX(-200%);
+    }
+    35% {
+      transform: translateX(-200%);
+    }
+    40% {
+      transform: translateX(-300%);
+    }
+    45% {
+      transform: translateX(-300%);
+    }
+    50% {
+      transform: translateX(-400%);
+    }
+    55% {
+      transform: translateX(-400%);
+    }
+    60% {
+      transform: translateX(-500%);
+    }
+    65% {
+      transform: translateX(-500%);
+    }
+    70% {
+      transform: translateX(-600%);
+    }
+    75% {
+      transform: translateX(-600%);
+    }
+    80% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  .about {
+    min-height: 45rem;
+    background-image: url("/getty-oil-well-with-workers-sunset-silhouette.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    div {
+      .level {
+        height: 100%;
+        .card {
           box-shadow: none;
-        }
-        .card-content {
-          p {
-            word-break: break-all;
+          .card-header {
+            box-shadow: none;
           }
-        }
-        .card-footer {
-          border: none;
-          .button:hover {
-            background-color: $warning;
-            span {
-              color: white !important;
+          .card-content {
+            p {
+              word-break: break-all;
+            }
+          }
+          .card-footer {
+            border: none;
+            .button:hover {
+              background-color: $black-ter;
+              span {
+                color: white !important;
+              }
             }
           }
         }
       }
     }
-  }
-  .about-news {
-    section {
-      position: relative;
-      width: 400px;
-      height: 616px;
-      overflow: hidden;
-      .about-news-slider {
+    .about-news {
+      section {
         position: relative;
-        list-style: none;
-        height: 10000%;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-        transition: all 750ms ease;
-        left: 0;
-        .about-news-slide {
+        width: 400px;
+        height: 616px;
+        overflow: hidden;
+        .about-news-slider {
           position: relative;
-          margin: 10px 0;
-          article {
-            background-color: white;
-            height: 192px !important;
-            padding: 15px;
-            figure {
-              height: 100%;
-              width: 175px;
-              img {
+          list-style: none;
+          height: 10000%;
+          width: 100%;
+          padding: 0;
+          margin: 0;
+          transition: all 750ms ease;
+          left: 0;
+          .about-news-slide {
+            position: relative;
+            margin: 10px 0;
+            article {
+              background-color: white;
+              height: 192px !important;
+              padding: 15px;
+              figure {
                 height: 100%;
+                width: 175px;
+                img {
+                  height: 100%;
+                }
+                time {
+                  position: absolute;
+                  top: 20px;
+                  left: 7px;
+                  background-color: $grey-light;
+                  color: $gre-darker;
+                  font-size: small;
+                  padding: 6px 10px;
+                  font-weight: 500;
+                }
               }
-              time {
+              div {
+                height: 100%;
+                width: 205px;
+                h1 {
+                  color: $gre-darker;
+                }
+                p {
+                  display: -webkit-box;
+                  -webkit-line-clamp: 3;
+                  -webkit-box-orient: vertical;
+                  text-overflow: ellipsis;
+                  overflow: hidden;
+                  color: $gre-darker;
+                }
+              }
+              button {
+                width: 100%;
                 position: absolute;
-                top: 20px;
-                left: 7px;
-                background-color: $grey-light;
-                color: $gre-darker;
-                font-size: small;
-                padding: 6px 10px;
+                bottom: 0;
+                left: 0;
+                border-radius: 0;
+                transform: translateY(50px);
+                transition: 0.3s;
                 font-weight: 500;
               }
             }
-            div {
-              height: 100%;
-              width: 205px;
-              h1 {
-                color: $gre-darker;
-              }
-              p {
-                display: -webkit-box;
-                -webkit-line-clamp: 3;
-                -webkit-box-orient: vertical;
-                text-overflow: ellipsis;
-                overflow: hidden;
-                color: $gre-darker;
-              }
-            }
-            button {
-              width: 100%;
-              position: absolute;
-              bottom: 0;
-              left: 0;
-              border-radius: 0;
-              transform: translateY(50px);
-              transition: 0.3s;
-              font-weight: 500;
-            }
+          }
+          .about-news-slide:hover button {
+            transform: translateY(0);
           }
         }
-        :hover button {
-          transform: translateY(0);
-        }
       }
-    }
-    .last-btn {
-      width: 95%;
-      background-color: transparent;
-      border: none;
-      border-top: 4px solid $warning;
-      border-radius: 0;
-      color: white;
-      -webkit-transition: background-color 0.3s ease-out;
-      -moz-transition: background-color 0.3s ease-out;
-      -o-transition: background-color 0.3s ease-out;
-      transition: background-color 0.3s ease-out;
-    }
-    .last-btn:hover {
-      background-color: $warning;
-    }
-    .last-btn-span {
-      transform: rotate(90deg);
-    }
-  }
-}
-
-.infinity {
-  position: relative;
-  top: 164px;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
-  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
-  article {
-    background-color: white;
-    width: 100%;
-    height: 180px !important;
-    padding: 0.85rem;
-    figure {
-      height: 150px;
-      width: 150px;
-      img {
-        height: 100%;
-      }
-    }
-    div {
-      height: 100%;
-      width: 225px;
-      box-shadow: none;
-      h1 {
-        color: $gre-darker;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        text-overflow: ellipsis;
-        overflow: hidden;
-      }
-      time {
-        color: $gre-darker;
-        font-size: 13px;
-        font-weight: 700;
-      }
-      p {
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        color: $gre-darker;
-      }
-    }
-  }
-  button {
-    width: 3rem;
-    height: 100%;
-    border-radius: 0;
-  }
-}
-
-.main-section {
-  margin-top: 9rem;
-  .bitumen-topics {
-    .level-right {
-      .card {
-        width: 430px;
+      .last-btn {
+        width: 95%;
         background-color: transparent;
-        box-shadow: none;
+        border: none;
+        border-top: 4px solid $black-ter;
         border-radius: 0;
-        .card-content {
-          height: 150px;
-          div {
-            .dot {
-              width: 35px;
-              height: 10px;
-              background-color: $warning;
-            }
-            div {
-              height: 120px;
-              h1 {
-                color: $gre-darker;
-                display: -webkit-box;
-                -webkit-line-clamp: 2;
-                -webkit-box-orient: vertical;
-                text-overflow: ellipsis;
-                overflow: hidden;
-              }
-            }
-            time {
-              color: $gre-darker;
-              font-size: 13px;
-              font-weight: 700;
-            }
-            p {
-              color: $gre-darker;
-              display: -webkit-box;
-              -webkit-line-clamp: 2;
-              -webkit-box-orient: vertical;
-              text-overflow: ellipsis;
-              overflow: hidden;
-            }
-          }
-        }
+        color: white;
+        -webkit-transition: background-color 0.3s ease-out;
+        -moz-transition: background-color 0.3s ease-out;
+        -o-transition: background-color 0.3s ease-out;
+        transition: background-color 0.3s ease-out;
       }
-    }
-  }
-  button {
-    width: 100%;
-    border-radius: 0;
-  }
-  button:hover {
-    background-color: $warning;
-    color: white !important;
-  }
-  .events-container {
-    .events {
-      height: 100%;
-      .event {
-        min-height: 17rem;
-        background-image: url("/crude-oil-barter.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        h1 {
-          height: 100%;
-          background-color: rgb(10 10 10 / 49%);
-          display: flex;
-          align-items: flex-end;
-        }
+      .last-btn:hover {
+        background-color: $black-ter;
       }
-      :hover h1 {
-        height: 30%;
-        animation: example 500ms ease-in-out forwards;
-      }
-      @keyframes example {
-        0% {
-          height: 100%;
-        }
-        100% {
-          height: 31%;
-          background-color: $warning;
-        }
+      .last-btn-span {
+        transform: rotate(90deg);
       }
     }
   }
 
-  .bitumen-news {
-    .is-12 {
-      box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
-      -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
-      -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
-    }
+  .infinity {
+    position: relative;
+    top: 164px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
     article {
       background-color: white;
+      width: 100%;
       height: 180px !important;
       padding: 0.85rem;
       figure {
@@ -461,198 +400,335 @@ main {
       border-radius: 0;
     }
   }
-  .argus-media-news {
-    .item {
-      width: 290px;
-      height: 300px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      padding: 1rem 1.5rem 0.75rem 1.5rem;
-      background-color: white;
-      box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
-      -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
-      -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
-      border-bottom: 4px solid $warning;
-      time {
-        color: $warning;
-        font: 13px;
-        font-weight: 500;
+
+  .main-section {
+    margin-top: 9rem;
+    .bitumen-topics {
+      .level-right {
+        .card {
+          width: 430px;
+          background-color: transparent;
+          box-shadow: none;
+          border-radius: 0;
+          .card-content {
+            height: 150px;
+            div {
+              .dot {
+                width: 35px;
+                height: 10px;
+                background-color: $black-ter;
+              }
+              div {
+                height: 120px;
+                h1 {
+                  color: $gre-darker;
+                  display: -webkit-box;
+                  -webkit-line-clamp: 2;
+                  -webkit-box-orient: vertical;
+                  text-overflow: ellipsis;
+                  overflow: hidden;
+                }
+              }
+              time {
+                color: $gre-darker;
+                font-size: 13px;
+                font-weight: 700;
+              }
+              p {
+                color: $gre-darker;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                text-overflow: ellipsis;
+                overflow: hidden;
+              }
+            }
+          }
+        }
       }
-      p {
-        word-break: break-all;
-        color: $gre-darker;
-        display: -webkit-box;
-        -webkit-line-clamp: 6;
-        -webkit-box-orient: vertical;
-        text-overflow: ellipsis;
-        overflow: hidden;
-      }
-    }
-    :hover > .hovered {
-      color: $warning;
     }
     button {
-      width: 32%;
-      float: right;
+      width: 100%;
+      border-radius: 0;
     }
-  }
-  .bitumen-price-reports {
-    article {
-      height: 170px !important;
-      padding: 0.85rem;
-      padding-bottom: 0;
-      padding-right: 0;
-      figure {
+    button:hover {
+      background-color: $black-ter;
+      color: white !important;
+    }
+    .events-container {
+      .events {
         height: 100%;
-        width: 150px;
-        img {
-          height: 100%;
+        .event {
+          min-height: 17rem;
+          background-image: url("/crude-oil-barter.jpg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          h1 {
+            height: 100%;
+            background-color: rgb(10 10 10 / 49%);
+            display: flex;
+            align-items: flex-end;
+          }
+        }
+        :hover h1 {
+          height: 30%;
+          animation: example 500ms ease-in-out forwards;
+        }
+        @keyframes example {
+          0% {
+            height: 100%;
+          }
+          100% {
+            height: 31%;
+            background-color: $black-ter;
+          }
         }
       }
-      div {
-        height: 100%;
-        width: 260px;
-        box-shadow: none;
-        border-radius: 0;
-        h1 {
-          color: $gre-darker;
-          display: -webkit-box;
-          -webkit-line-clamp: 2;
-          -webkit-box-orient: vertical;
-          text-overflow: ellipsis;
-          overflow: hidden;
+    }
+
+    .bitumen-news {
+      .is-12 {
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
+      }
+      article {
+        background-color: white;
+        height: 180px !important;
+        padding: 0.85rem;
+        figure {
+          height: 150px;
+          width: 150px;
+          img {
+            height: 100%;
+          }
         }
+        div {
+          height: 100%;
+          width: 225px;
+          box-shadow: none;
+          h1 {
+            color: $gre-darker;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            text-overflow: ellipsis;
+            overflow: hidden;
+          }
+          time {
+            color: $gre-darker;
+            font-size: 13px;
+            font-weight: 700;
+          }
+          p {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            color: $gre-darker;
+          }
+        }
+      }
+      button {
+        width: 3rem;
+        height: 100%;
+        border-radius: 0;
+      }
+    }
+    .argus-media-news {
+      .item {
+        width: 290px;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 1rem 1.5rem 0.75rem 1.5rem;
+        background-color: white;
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
+        border-bottom: 4px solid $black-ter;
         time {
-          color: $gre-darker;
-          font-size: 13px;
-          font-weight: 700;
+          color: $black-ter;
+          font: 13px;
+          font-weight: 500;
         }
         p {
+          word-break: break-all;
+          color: $gre-darker;
           display: -webkit-box;
-          -webkit-line-clamp: 2;
+          -webkit-line-clamp: 6;
           -webkit-box-orient: vertical;
           text-overflow: ellipsis;
           overflow: hidden;
-          color: $gre-darker;
+        }
+      }
+      :hover > .hovered {
+        color: $black-ter;
+      }
+      button {
+        width: 32%;
+        float: right;
+      }
+    }
+    .bitumen-price-reports {
+      article {
+        height: 170px !important;
+        padding: 0.85rem;
+        padding-bottom: 0;
+        padding-right: 0;
+        figure {
+          height: 100%;
+          width: 150px;
+          img {
+            height: 100%;
+          }
+        }
+        div {
+          height: 100%;
+          width: 260px;
+          box-shadow: none;
+          border-radius: 0;
+          h1 {
+            color: $gre-darker;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            text-overflow: ellipsis;
+            overflow: hidden;
+          }
+          time {
+            color: $gre-darker;
+            font-size: 13px;
+            font-weight: 700;
+          }
+          p {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            color: $gre-darker;
+          }
         }
       }
     }
-  }
-  .bitumen-grade {
-    p {
-      font-weight: 500;
-      color: $gre-darker;
+    .bitumen-grade {
+      p {
+        font-weight: 500;
+        color: $gre-darker;
+      }
     }
-  }
 
-  .advertising {
-    min-height: 309px;
-    background-image: url("/crude-oil-barter.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: opacity(0.85);
-    -webkit-filter: opacity(0.85);
-    -moz-filter: opacity(0.85);
-  }
-
-  .advertising {
-    button {
-      width: 150px;
-      height: 40px;
-      background-color: $gre-darker;
-      border: none;
-      position: relative;
-      bottom: 20px;
-      color: white;
-      transition: background-color 0.2s linear;
-      transform: translate(0);
-    }
-    :hover {
-      color: $gre-darker !important;
-      background-color: white;
-      border-left: 5px solid $gre-darker;
-    }
-  }
-
-  .bitumart-article {
-    .bitumart-article-bg {
-      height: 15rem;
+    .advertising {
+      min-height: 309px;
       background-image: url("/crude-oil-barter.jpg");
       background-repeat: no-repeat;
       background-size: cover;
-      background-position: center;
       filter: opacity(0.85);
       -webkit-filter: opacity(0.85);
       -moz-filter: opacity(0.85);
     }
-    article {
-      background-color: white;
-      padding: 0.85rem;
-      figure {
-        height: 150px;
+
+    .advertising {
+      button {
         width: 150px;
-        img {
+        height: 40px;
+        background-color: $gre-darker;
+        border: none;
+        position: relative;
+        bottom: 20px;
+        color: white;
+        transition: background-color 0.2s linear;
+        transform: translate(0);
+      }
+      :hover {
+        color: $gre-darker !important;
+        background-color: white;
+        border-left: 5px solid $gre-darker;
+      }
+    }
+
+    .bitumart-article {
+      .bitumart-article-bg {
+        height: 15rem;
+        background-image: url("/crude-oil-barter.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        filter: opacity(0.85);
+        -webkit-filter: opacity(0.85);
+        -moz-filter: opacity(0.85);
+      }
+      article {
+        background-color: white;
+        padding: 0.85rem;
+        figure {
+          height: 150px;
+          width: 150px;
+          img {
+            height: 100%;
+          }
+        }
+        div {
           height: 100%;
+          width: 235px;
+          box-shadow: none;
+          h1 {
+            color: $gre-darker;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            text-overflow: ellipsis;
+            overflow: hidden;
+          }
+          time {
+            color: $gre-darker;
+            font-size: 13px;
+            font-weight: 700;
+          }
+          a {
+            direction: rtl;
+          }
         }
       }
-      div {
-        height: 100%;
-        width: 235px;
-        box-shadow: none;
-        h1 {
-          color: $gre-darker;
-          display: -webkit-box;
-          -webkit-line-clamp: 3;
-          -webkit-box-orient: vertical;
-          text-overflow: ellipsis;
-          overflow: hidden;
-        }
-        time {
-          color: $gre-darker;
-          font-size: 13px;
-          font-weight: 700;
-        }
-        a {
-          direction: rtl;
-        }
+      .items-container {
+        position: relative;
+        bottom: -35px;
       }
     }
-    .items-container {
-      position: relative;
-      bottom: -35px;
-    }
-  }
-  .oil-price-news {
-    margin: 6rem 0;
-    article {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      figure {
-        width: 100%;
-        align-self: center;
-      }
-      div {
-        width: 100%;
-        margin-top: 15px;
-        background-color: $grey-light;
-        padding: 10px;
-        p {
-          color: $gre-darker;
-          display: -webkit-box;
-          -webkit-line-clamp: 3;
-          -webkit-box-orient: vertical;
-          text-overflow: ellipsis;
-          overflow: hidden;
+    .oil-price-news {
+      margin: 6rem 0;
+      article {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        figure {
+          width: 100%;
+          align-self: center;
+        }
+        div {
+          width: 100%;
+          margin-top: 15px;
+          background-color: $grey-light;
+          padding: 10px;
+          p {
+            color: $gre-darker;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            text-overflow: ellipsis;
+            overflow: hidden;
+          }
         }
       }
-    }
-    :hover > h1 {
-      color: $warning;
-    }
-    button:hover {
-      background-color: $gre-darker;
+      :hover > h1 {
+        color: $black-ter;
+      }
+      button:hover {
+        background-color: $gre-darker;
+      }
     }
   }
 }
@@ -683,7 +759,7 @@ footer {
       font-weight: 500;
     }
     :hover {
-      color: $warning;
+      color: $black-ter;
     }
   }
 }
