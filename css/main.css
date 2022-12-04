@@ -19,6 +19,7 @@
   height: 40px;
   position: relative;
   top: -12px;
+  left: -2px;
   color: white;
   font-weight: 500;
   border-radius: 0 0 10% 10%;
@@ -39,6 +40,37 @@
   text-overflow: ellipsis;
   overflow: hidden;
   color: #2B2D42;
+}
+
+.card {
+  max-width: 440px !important;
+  max-height: 530px;
+  cursor: pointer;
+}
+.card .subtitle {
+  font-size: medium;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #2B2D42;
+}
+.card .title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #2B2D42;
+}
+
+.card:hover .title {
+  color: #F64225;
+}
+
+.pagination-link.is-current {
+  border-color: #F64225 !important;
 }
 
 /* 
