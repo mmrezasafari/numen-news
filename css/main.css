@@ -53,12 +53,12 @@ svg {
   color: #2B2D42;
 }
 
-.card {
+.post-card {
   max-width: 440px !important;
   max-height: 530px;
   cursor: pointer;
 }
-.card .subtitle {
+.post-card .subtitle {
   font-size: medium;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -67,7 +67,7 @@ svg {
   overflow: hidden;
   color: #2B2D42;
 }
-.card .title {
+.post-card .title {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -76,7 +76,7 @@ svg {
   color: #2B2D42;
 }
 
-.card:hover .title {
+.post-card:hover .title {
   color: #F64225;
 }
 

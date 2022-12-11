@@ -49,7 +49,7 @@ svg {
   }
 }
 
-.card {
+.post-card {
   max-width: 440px !important;
   max-height: 530px;
   cursor: pointer;
@@ -71,7 +71,7 @@ svg {
     color: $gre-darker;
   }
 }
-.card:hover {
+.post-card:hover {
   .title {
     color: $black-ter;
   }
