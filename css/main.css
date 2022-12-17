@@ -281,11 +281,18 @@ main .price_slide .price-container ul li {
   }
 }
 main .about {
+  display: inline-block;
+  position: relative;
+  width: 100%;
   min-height: 45rem;
-  background-image: url("/getty-oil-well-with-workers-sunset-silhouette.webp");
-  background-repeat: no-repeat;
+}
+main .about .about-bg-image {
+  width: 100%;
+  height: 100%;
   background-size: cover;
   background-position: center;
+  pointer-events: none;
+  position: absolute;
 }
 main .about div .level {
   height: 100%;
@@ -500,16 +507,25 @@ main .main-section .events-container .events {
   height: 100%;
 }
 main .main-section .events-container .events .event {
+  display: inline-block;
+  position: relative;
+  width: 100%;
   min-height: 17rem;
-  background-image: url("/crude-oil-barter.jpg");
-  background-repeat: no-repeat;
+}
+main .main-section .events-container .events .event .event-bg-image {
+  width: 100%;
+  height: 100%;
   background-size: cover;
+  background-position: center;
+  pointer-events: none;
+  position: absolute;
 }
 main .main-section .events-container .events .event h1 {
   height: 100%;
-  background-color: rgba(10, 10, 10, 0.49);
+  background-color: rgba(10, 10, 10, 0.363);
   display: flex;
   align-items: flex-end;
+  z-index: 1;
 }
 main .main-section .events-container .events :hover h1 {
   height: 30%;
@@ -651,10 +667,17 @@ main .main-section .bitumen-grade p {
   color: #2B2D42;
 }
 main .main-section .advertising {
+  position: relative;
+  width: 100%;
   min-height: 309px;
-  background-image: url("/crude-oil-barter.jpg");
-  background-repeat: no-repeat;
+}
+main .main-section .advertising .advertising-bg-img {
+  width: 100%;
+  height: 100%;
   background-size: cover;
+  background-position: center;
+  pointer-events: none;
+  position: absolute;
   filter: opacity(0.85);
   -webkit-filter: opacity(0.85);
   -moz-filter: opacity(0.85);
@@ -675,12 +698,18 @@ main .main-section .advertising :hover {
   background-color: white;
   border-left: 5px solid #2B2D42;
 }
-main .main-section .bitumart-article .bitumart-article-bg {
+main .main-section .bitumart-article .bitumart-article-main {
+  position: relative;
+  width: 100%;
   height: 15rem;
-  background-image: url("/crude-oil-barter.jpg");
-  background-repeat: no-repeat;
+}
+main .main-section .bitumart-article .bitumart-article-main .bitumart-bg-img {
+  width: 100%;
+  height: 100%;
   background-size: cover;
   background-position: center;
+  pointer-events: none;
+  position: absolute;
   filter: opacity(0.85);
   -webkit-filter: opacity(0.85);
   -moz-filter: opacity(0.85);

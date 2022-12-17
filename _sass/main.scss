@@ -228,11 +228,18 @@ main {
   }
 
   .about {
+    display: inline-block;
+    position: relative;
+    width: 100%;
     min-height: 45rem;
-    background-image: url("/getty-oil-well-with-workers-sunset-silhouette.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    .about-bg-image {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      pointer-events: none;
+      position: absolute;
+    }
     div {
       .level {
         height: 100%;
@@ -460,15 +467,24 @@ main {
       .events {
         height: 100%;
         .event {
+          display: inline-block;
+          position: relative;
+          width: 100%;
           min-height: 17rem;
-          background-image: url("/crude-oil-barter.jpg");
-          background-repeat: no-repeat;
-          background-size: cover;
+          .event-bg-image {
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            pointer-events: none;
+            position: absolute;
+          }
           h1 {
             height: 100%;
-            background-color: rgb(10 10 10 / 49%);
+            background-color: rgba(10, 10, 10, 0.363);
             display: flex;
             align-items: flex-end;
+            z-index: 1;
           }
         }
         :hover h1 {
@@ -623,13 +639,20 @@ main {
     }
 
     .advertising {
+      position: relative;
+      width: 100%;
       min-height: 309px;
-      background-image: url("/crude-oil-barter.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      filter: opacity(0.85);
-      -webkit-filter: opacity(0.85);
-      -moz-filter: opacity(0.85);
+      .advertising-bg-img {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        pointer-events: none;
+        position: absolute;
+        filter: opacity(0.85);
+        -webkit-filter: opacity(0.85);
+        -moz-filter: opacity(0.85);
+      }
     }
 
     .advertising {
@@ -652,15 +675,21 @@ main {
     }
 
     .bitumart-article {
-      .bitumart-article-bg {
+      .bitumart-article-main {
+        position: relative;
+        width: 100%;
         height: 15rem;
-        background-image: url("/crude-oil-barter.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        filter: opacity(0.85);
-        -webkit-filter: opacity(0.85);
-        -moz-filter: opacity(0.85);
+        .bitumart-bg-img {
+          width: 100%;
+          height: 100%;
+          background-size: cover;
+          background-position: center;
+          pointer-events: none;
+          position: absolute;
+          filter: opacity(0.85);
+          -webkit-filter: opacity(0.85);
+          -moz-filter: opacity(0.85);
+        }
       }
       article {
         background-color: white;
