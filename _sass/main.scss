@@ -152,8 +152,10 @@ main {
   background-color: $grey-light;
 
   .see_more_button {
+    width: 100%;
     background-color: $black-ter;
     border: none !important;
+    border-radius: none;
   }
   .see_more_button:hover {
     background-color: $black-ter;

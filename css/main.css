@@ -210,8 +210,10 @@ main {
   background-color: #F6F4F0;
 }
 main .see_more_button {
+  width: 100%;
   background-color: #F64225;
   border: none !important;
+  border-radius: none;
 }
 main .see_more_button:hover {
   background-color: #F64225;
