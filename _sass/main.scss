@@ -22,75 +22,90 @@ $section-padding: 1rem 3rem;
   height: 100% !important;
 }
 
+.bold_text {
+  font-size: larger;
+  font-weight: 700;
+}
+
+.search_submit_input {
+  height: 3rem !important;
+  background-color: variables.$grey-light;
+  outline: none;
+  border: none;
+  box-shadow: none !important;
+  padding: 0 20px;
+  font-size: large;
+}
+
+.search_submit_input::placeholder {
+  color: variables.$grey-dark;
+  font-weight: 500;
+  font-size: large;
+}
+
+.search_submit_input:focus {
+  outline: none !important;
+}
+
+.hoverable_button:hover {
+  background-color: $black-ter !important;
+  color: white !important;
+  border: none;
+  span {
+    color: white !important;
+  }
+}
+
 .wrapper {
   display: grid;
   grid-template-areas:
     "header header header header header header"
     "main main main main main main"
     "footer footer footer footer footer footer";
+}
 
-  header {
-    grid-area: header;
-  }
+header {
+  grid-area: header;
+}
 
-  main {
-    grid-area: main;
-  }
+main {
+  grid-area: main;
+  background-color: $grey-light !important;
+  padding-top: 5rem;
+}
 
-  footer {
-    grid-area: footer;
-  }
+footer {
+  grid-area: footer;
 }
 
 /*
     * _____________________________________________________________________ HEADER STYLE __________________________________________________________________________ *
 */
 
-.navbar-start {
-  a {
-    font-size: larger;
-  }
-  :hover {
-    color: variables.$orange !important;
-    background-color: transparent !important;
-  }
-  .navbar-dropdown {
-    background-color: rgb(255, 255, 255) !important;
-  }
+.navbar-dropdown {
+  background-color: rgb(255, 255, 255) !important;
 }
 
-.nav_search_input {
-  input {
-    height: 3rem !important;
-    background-color: variables.$grey-light;
-    outline: none;
-    border: none;
-    box-shadow: none !important;
-  }
-  ::placeholder {
-    color: variables.$grey-dark;
-    font-weight: 500;
-    font-size: large;
-  }
-  :focus {
-    outline: none !important;
-  }
+.hoverable_orange:hover {
+  color: variables.$orange !important;
+  background-color: transparent !important;
 }
 
-.price_slide {
-  .price-container {
-    overflow: hidden;
-    width: 230% !important;
-    ul {
-      position: relative;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      li {
-        animation: price-slide 70s infinite;
-      }
-    }
-  }
+
+.price-container {
+  width: 230% !important;
+  overflow: hidden;
+}
+
+.prices_unorder_list {
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.perices_lsit_item {
+  animation: price-slide 70s infinite;
 }
 
 @keyframes price-slide {
@@ -148,679 +163,590 @@ $section-padding: 1rem 3rem;
 * ______________________________________________________________________ MAIN STYLE ______________________________________________________________________________ *
 */
 
-main {
+.see_more_button {
+  width: 100%;
+  background-color: $black-ter;
+  border: none !important;
+  border-radius: none;
+}
+
+.see_more_button:hover {
+  background-color: $black-ter;
+  color: white;
+}
+
+.about_card {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  margin-bottom: 12rem;
+}
+
+.about-bg-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  pointer-events: none;
+  position: absolute;
+}
+
+.about_card {
+  box-shadow: none !important;
+}
+
+.about_card_header {
+  box-shadow: none !important;
+}
+
+.about_card_content {
+  p {
+    word-break: break-all;
+  }
+}
+
+.aboute_card_footer {
+  border: none !important;
+}
+
+.about-news {
+  position: relative;
+  width: 400px;
+  height: 616px;
+  overflow: hidden;
+}
+
+.about-news-slider {
+  position: relative;
+  list-style: none;
+  height: 10000%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  transition: all 750ms ease;
+  left: 0;
+}
+
+.about-news-slide {
+  position: relative;
+  margin: 10px 0;
+}
+
+.about_news_article {
+  background-color: white;
+  height: 192px !important;
+  padding: 15px;
+}
+
+.about_news_figure {
+  height: 100%;
+  width: 175px;
+  img {
+    height: 100%;
+  }
+  time {
+    position: absolute;
+    top: 20px;
+    left: 7px;
+    background-color: $grey-light;
+    color: $gre-darker;
+    font-size: small;
+    padding: 6px 10px;
+    font-weight: 500;
+  }
+}
+
+.about_news_content {
+  height: 100%;
+  width: 205px;
+  background-color: none;
+  box-shadow: none !important;
+  h1 {
+    color: $gre-darker;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: $gre-darker;
+  }
+}
+
+.about_news_see_more_btn {
+  width: 100%;
+  position: absolute !important;
+  bottom: 0;
+  left: 0;
+  border-radius: 0 !important;
+  border: none !important;
+  transform: translateY(50px);
+  transition: 0.3s;
+  font-weight: 500;
+  color: $black-ter !important;
+}
+
+.about_news_article:hover {
+  cursor: pointer;
+  .about_news_see_more_btn {
+    transform: translateY(0);
+  }
+}
+
+.last-btn {
+  width: 95%;
+  border: none;
+  border-top: 4px solid $black-ter;
+  border-radius: 0 !important;
+  color: white;
+  -webkit-transition: background-color 0.3s ease-out;
+  -moz-transition: background-color 0.3s ease-out;
+  -o-transition: background-color 0.3s ease-out;
+  transition: background-color 0.3s ease-out;
+}
+
+.last-btn:hover {
+  background-color: $black-ter;
+}
+
+.last-btn-span {
+  transform: rotate(90deg);
+  color: $black-ter !important;
+}
+
+.infinity {
+  position: relative;
+  top: 146px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
+}
+
+.infinity_article {
+  background-color: white;
+  width: 100%;
+  height: 180px !important;
+  padding: 0.85rem;
+}
+
+.infinity_article_figure {
+  height: 150px;
+  width: 150px;
+  img {
+    height: 100%;
+  }
+}
+
+.infinity_article_content {
+  height: 100%;
+  width: 225px;
+  box-shadow: none;
+  h1 {
+    color: $gre-darker;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  time {
+    color: $gre-darker;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: $gre-darker;
+  }
+}
+
+.see_more_button_infinity {
+  width: 3rem !important;
+  height: 100% !important;
+  border-radius: 0 !important;
+  background-color: $black-ter !important;
+  border: none !important;
+}
+
+.topics_card {
+  width: 430px;
+  background-color: transparent;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.topic_card_content {
+  height: 150px;
+}
+
+.dot {
+  width: 35px;
+  height: 10px;
+  background-color: $black-ter;
+}
+
+.topic_content {
+  height: 120px;
+  h1 {
+    color: $gre-darker;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  time {
+    color: $gre-darker;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  p {
+    color: $gre-darker;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+
+.events {
+  height: 100%;
+}
+
+.event {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  min-height: 17rem;
+  .event-bg-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    pointer-events: none;
+    position: absolute;
+  }
+  h1 {
+    height: 100%;
+    background-color: rgba(10, 10, 10, 0.363);
+    display: flex;
+    align-items: flex-end;
+    z-index: 1;
+  }
+}
+
+.event:hover h1 {
+  height: 30%;
+  animation: example 500ms ease-in-out forwards;
+}
+
+@keyframes example {
+  0% {
+    height: 100%;
+  }
+  100% {
+    height: 31%;
+    background-color: $black-ter;
+  }
+}
+
+.price_report_article {
+  height: 170px !important;
+  padding: 0.85rem;
+  padding-bottom: 0;
+  padding-right: 0;
+  figure {
+    height: 100%;
+    width: 150px;
+    img {
+      height: 100%;
+    }
+  }
+}
+
+.price_reports_content {
+  height: 100%;
+  width: 260px;
+  h1 {
+    color: $gre-darker;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  time {
+    color: $gre-darker;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: $gre-darker;
+  }
+}
+
+.main-section {
+  margin-top: 9rem;
+}
+
+.bitumen_news_posts {
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
+}
+
+.bitumen_news_article {
+  background-color: white;
+  height: 180px !important;
+  padding: 0.85rem;
+  figure {
+    height: 150px;
+    width: 150px;
+    img {
+      height: 100%;
+    }
+  }
+}
+
+.bitumen_news_content {
+  height: 100%;
+  width: 225px;
+  box-shadow: none !important;
+  h1 {
+    color: $gre-darker;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  time {
+    color: $gre-darker;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: $gre-darker;
+  }
+}
+
+.bitumen_news_button {
+  width: 3rem;
+  border-radius: 0 !important;
+}
+
+.argus_media_news_item {
+  width: 290px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1rem 1.5rem 0.75rem 1.5rem;
+  background-color: white;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
+  border-bottom: 4px solid $black-ter;
+  time {
+    color: $black-ter;
+    font: 13px;
+    font-weight: 500;
+  }
+  p {
+    word-break: break-all;
+    color: $gre-darker;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+
+.argus_media_news_item:hover > .hovered {
+  color: $black-ter;
+}
+
+.argus_media_news_btn {
+  float: right;
+  width: 18.2rem;
+}
+
+.bitumen-grade {
+  h1 {
+    font-size: 14px;
+  }
+}
+
+.bitumen_grade_content {
+  p {
+    font-weight: 500;
+    font-size: large;
+    color: $gre-darker;
+  }
+}
+
+.advertising {
+  position: relative;
+  min-height: 309px;
+}
+
+.advertising-bg-img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  pointer-events: none;
+  position: absolute;
+  filter: opacity(0.85);
+  -webkit-filter: opacity(0.85);
+  -moz-filter: opacity(0.85);
+}
+
+.advertising_button {
+  width: 150px;
+  height: 40px;
+  background-color: $gre-darker !important;
+  border: none;
+  position: relative;
+  bottom: 20px;
+  color: white !important;
+  border-radius: 0 !important;
+  border: none !important;
+  transition: background-color 0.2s linear;
+  transform: translate(0);
+}
+
+.advertising_button:hover {
+  color: $gre-darker !important;
+  background-color: white !important;
+  border-left: 5px solid $gre-darker;
+}
+
+.bitumart {
+  margin-bottom: 12rem;
+}
+
+.bitumart-main {
+  position: relative;
+  width: 100%;
+  height: 15rem;
+}
+
+.bitumart-bg-img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  pointer-events: none;
+  position: absolute;
+  filter: opacity(0.85);
+  -webkit-filter: opacity(0.85);
+  -moz-filter: opacity(0.85);
+}
+
+.bitumart_article {
+  background-color: white;
+  padding: 0.85rem;
+  figure {
+    height: 150px;
+    width: 150px;
+    img {
+      height: 100%;
+    }
+  }
+}
+
+.bitumart_article_content {
+  height: 100%;
+  width: 235px;
+  box-shadow: none;
+  h1 {
+    color: $gre-darker;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  time {
+    color: $gre-darker;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  a {
+    direction: rtl;
+  }
+}
+
+.items-container {
+  position: relative;
+  bottom: -45px;
+}
+
+.oil-price-news {
+  margin-bottom: 5rem !important;
+}
+
+.oil_price_news_item {
+  width: 18rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  figure {
+    width: 100%;
+    align-self: center;
+  }
+}
+.oil_price_news_item_content {
+  width: 100%;
+  margin-top: 15px;
   background-color: $grey-light;
-
-  .see_more_button {
-    width: 100%;
-    background-color: $black-ter;
-    border: none !important;
-    border-radius: none;
+  padding: 10px;
+  p {
+    color: $gre-darker;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
-  .see_more_button:hover {
-    background-color: $black-ter;
-    color: white;
+  time {
+    color: $gre-darker;
+    font-size: 13px;
+    font-weight: 700;
   }
+}
 
-  .price_slide {
-    .price-container {
-      overflow: hidden;
-      width: 230%;
-      ul {
-        position: relative;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        li {
-          animation: price-slide 70s infinite;
-        }
-      }
-    }
-  }
+.oil_price_news_item_content:hover > h1 {
+  color: $black-ter;
+  cursor: pointer;
+}
 
-  @keyframes price-slide {
-    5% {
-      transform: translateX(0%);
-    }
-    10% {
-      transform: translateX(0%);
-    }
-    15% {
-      transform: translateX(-100%);
-    }
-    20% {
-      transform: translateX(-100%);
-    }
-    30% {
-      transform: translateX(-200%);
-    }
-    35% {
-      transform: translateX(-200%);
-    }
-    40% {
-      transform: translateX(-300%);
-    }
-    45% {
-      transform: translateX(-300%);
-    }
-    50% {
-      transform: translateX(-400%);
-    }
-    55% {
-      transform: translateX(-400%);
-    }
-    60% {
-      transform: translateX(-500%);
-    }
-    65% {
-      transform: translateX(-500%);
-    }
-    70% {
-      transform: translateX(-600%);
-    }
-    75% {
-      transform: translateX(-600%);
-    }
-    80% {
-      transform: translateX(0%);
-    }
-    100% {
-      transform: translateX(0%);
-    }
-  }
-
-  .about {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    min-height: 45rem;
-    .about-bg-image {
-      width: 100%;
-      height: 100%;
-      background-size: cover;
-      background-position: center;
-      pointer-events: none;
-      position: absolute;
-    }
-    div {
-      .level {
-        height: 100%;
-        .card {
-          box-shadow: none;
-          .card-header {
-            box-shadow: none;
-          }
-          .card-content {
-            p {
-              word-break: break-all;
-            }
-          }
-          .card-footer {
-            border: none;
-            .button:hover {
-              background-color: $black-ter;
-              span {
-                color: white !important;
-              }
-            }
-          }
-        }
-      }
-    }
-    .about-news {
-      section {
-        position: relative;
-        width: 400px;
-        height: 616px;
-        overflow: hidden;
-        .about-news-slider {
-          position: relative;
-          list-style: none;
-          height: 10000%;
-          width: 100%;
-          padding: 0;
-          margin: 0;
-          transition: all 750ms ease;
-          left: 0;
-          .about-news-slide {
-            position: relative;
-            margin: 10px 0;
-            article {
-              background-color: white;
-              height: 192px !important;
-              padding: 15px;
-              figure {
-                height: 100%;
-                width: 175px;
-                img {
-                  height: 100%;
-                }
-                time {
-                  position: absolute;
-                  top: 20px;
-                  left: 7px;
-                  background-color: $grey-light;
-                  color: $gre-darker;
-                  font-size: small;
-                  padding: 6px 10px;
-                  font-weight: 500;
-                }
-              }
-              div {
-                height: 100%;
-                width: 205px;
-                h1 {
-                  color: $gre-darker;
-                }
-                p {
-                  display: -webkit-box;
-                  -webkit-line-clamp: 3;
-                  -webkit-box-orient: vertical;
-                  text-overflow: ellipsis;
-                  overflow: hidden;
-                  color: $gre-darker;
-                }
-              }
-              button {
-                width: 100%;
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                border-radius: 0;
-                transform: translateY(50px);
-                transition: 0.3s;
-                font-weight: 500;
-              }
-            }
-          }
-          .about-news-slide:hover button {
-            transform: translateY(0);
-          }
-        }
-      }
-      .last-btn {
-        width: 95%;
-        background-color: transparent;
-        border: none;
-        border-top: 4px solid $black-ter;
-        border-radius: 0;
-        color: white;
-        -webkit-transition: background-color 0.3s ease-out;
-        -moz-transition: background-color 0.3s ease-out;
-        -o-transition: background-color 0.3s ease-out;
-        transition: background-color 0.3s ease-out;
-      }
-      .last-btn:hover {
-        background-color: $black-ter;
-      }
-      .last-btn-span {
-        transform: rotate(90deg);
-      }
-    }
-  }
-
-  .infinity {
-    position: relative;
-    top: 164px;
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
-    -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
-    -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
-    article {
-      background-color: white;
-      width: 100%;
-      height: 180px !important;
-      padding: 0.85rem;
-      figure {
-        height: 150px;
-        width: 150px;
-        img {
-          height: 100%;
-        }
-      }
-      div {
-        height: 100%;
-        width: 225px;
-        box-shadow: none;
-        h1 {
-          color: $gre-darker;
-          display: -webkit-box;
-          -webkit-line-clamp: 3;
-          -webkit-box-orient: vertical;
-          text-overflow: ellipsis;
-          overflow: hidden;
-        }
-        time {
-          color: $gre-darker;
-          font-size: 13px;
-          font-weight: 700;
-        }
-        p {
-          display: -webkit-box;
-          -webkit-line-clamp: 2;
-          -webkit-box-orient: vertical;
-          text-overflow: ellipsis;
-          overflow: hidden;
-          color: $gre-darker;
-        }
-      }
-    }
-    button {
-      width: 3rem;
-      height: 100%;
-      border-radius: 0;
-    }
-  }
-
-  .above-section {
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-    .bitumen-topics {
-      .level-right {
-        .card {
-          width: 430px;
-          background-color: transparent;
-          box-shadow: none;
-          border-radius: 0;
-          .card-content {
-            height: 150px;
-            div {
-              .dot {
-                width: 35px;
-                height: 10px;
-                background-color: $black-ter;
-              }
-              div {
-                height: 120px;
-                h1 {
-                  color: $gre-darker;
-                  display: -webkit-box;
-                  -webkit-line-clamp: 2;
-                  -webkit-box-orient: vertical;
-                  text-overflow: ellipsis;
-                  overflow: hidden;
-                }
-              }
-              time {
-                color: $gre-darker;
-                font-size: 13px;
-                font-weight: 700;
-              }
-              p {
-                color: $gre-darker;
-                display: -webkit-box;
-                -webkit-line-clamp: 2;
-                -webkit-box-orient: vertical;
-                text-overflow: ellipsis;
-                overflow: hidden;
-              }
-            }
-          }
-        }
-      }
-    }
-
-    button {
-      width: 100%;
-      border-radius: 0;
-    }
-    button:hover {
-      background-color: $black-ter;
-      color: white !important;
-    }
-
-    .events-container {
-      .events {
-        height: 100%;
-        .event {
-          display: inline-block;
-          position: relative;
-          width: 100%;
-          min-height: 17rem;
-          .event-bg-image {
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            pointer-events: none;
-            position: absolute;
-          }
-          h1 {
-            height: 100%;
-            background-color: rgba(10, 10, 10, 0.363);
-            display: flex;
-            align-items: flex-end;
-            z-index: 1;
-          }
-        }
-        :hover h1 {
-          height: 30%;
-          animation: example 500ms ease-in-out forwards;
-        }
-        @keyframes example {
-          0% {
-            height: 100%;
-          }
-          100% {
-            height: 31%;
-            background-color: $black-ter;
-          }
-        }
-      }
-    }
-
-    .bitumen-price-reports {
-      article {
-        height: 170px !important;
-        padding: 0.85rem;
-        padding-bottom: 0;
-        padding-right: 0;
-        figure {
-          height: 100%;
-          width: 150px;
-          img {
-            height: 100%;
-          }
-        }
-        div {
-          height: 100%;
-          width: 260px;
-          box-shadow: none;
-          border-radius: 0;
-          h1 {
-            color: $gre-darker;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            text-overflow: ellipsis;
-            overflow: hidden;
-          }
-          time {
-            color: $gre-darker;
-            font-size: 13px;
-            font-weight: 700;
-          }
-          p {
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            color: $gre-darker;
-          }
-        }
-      }
-    }
-  }
-
-  .main-section {
-    margin-top: 9rem;
-    .bitumen-news {
-      .is-12 {
-        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
-        -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
-        -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
-      }
-      article {
-        background-color: white;
-        height: 180px !important;
-        padding: 0.85rem;
-        figure {
-          height: 150px;
-          width: 150px;
-          img {
-            height: 100%;
-          }
-        }
-        div {
-          height: 100%;
-          width: 225px;
-          box-shadow: none;
-          h1 {
-            color: $gre-darker;
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            text-overflow: ellipsis;
-            overflow: hidden;
-          }
-          time {
-            color: $gre-darker;
-            font-size: 13px;
-            font-weight: 700;
-          }
-          p {
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            color: $gre-darker;
-          }
-        }
-      }
-      button {
-        width: 3rem;
-        height: 100%;
-        border-radius: 0;
-      }
-    }
-    .argus-media-news {
-      .item {
-        width: 290px;
-        height: 300px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        padding: 1rem 1.5rem 0.75rem 1.5rem;
-        background-color: white;
-        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
-        -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
-        -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
-        border-bottom: 4px solid $black-ter;
-        time {
-          color: $black-ter;
-          font: 13px;
-          font-weight: 500;
-        }
-        p {
-          word-break: break-all;
-          color: $gre-darker;
-          display: -webkit-box;
-          -webkit-line-clamp: 6;
-          -webkit-box-orient: vertical;
-          text-overflow: ellipsis;
-          overflow: hidden;
-        }
-      }
-      :hover > .hovered {
-        color: $black-ter;
-      }
-      button {
-        width: 32%;
-        float: right;
-      }
-    }
-    .bitumen-price-reports {
-      article {
-        height: 170px !important;
-        padding: 0.85rem;
-        padding-bottom: 0;
-        padding-right: 0;
-        figure {
-          height: 100%;
-          width: 150px;
-          img {
-            height: 100%;
-          }
-        }
-        div {
-          height: 100%;
-          width: 260px;
-          box-shadow: none;
-          border-radius: 0;
-          h1 {
-            color: $gre-darker;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            text-overflow: ellipsis;
-            overflow: hidden;
-          }
-          time {
-            color: $gre-darker;
-            font-size: 13px;
-            font-weight: 700;
-          }
-          p {
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            color: $gre-darker;
-          }
-        }
-      }
-    }
-    .bitumen-grade {
-      p {
-        font-weight: 500;
-        font-size: large;
-        color: $gre-darker;
-      }
-
-      .title {
-        font-size: 14px;
-      }
-
-      .item {
-        height: 4.1rem;
-        align-items: center;
-      }
-    }
-
-    .advertising {
-      position: relative;
-      min-height: 309px;
-      .advertising-bg-img {
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        background-position: center;
-        pointer-events: none;
-        position: absolute;
-        filter: opacity(0.85);
-        -webkit-filter: opacity(0.85);
-        -moz-filter: opacity(0.85);
-      }
-    }
-
-    .advertising {
-      button {
-        width: 150px;
-        height: 40px;
-        background-color: $gre-darker;
-        border: none;
-        position: relative;
-        bottom: 20px;
-        color: white;
-        transition: background-color 0.2s linear;
-        transform: translate(0);
-      }
-      :hover {
-        color: $gre-darker !important;
-        background-color: white;
-        border-left: 5px solid $gre-darker;
-      }
-    }
-
-    .bitumart-article {
-      .bitumart-article-main {
-        position: relative;
-        width: 100%;
-        height: 15rem;
-        .bitumart-bg-img {
-          width: 100%;
-          height: 100%;
-          background-size: cover;
-          background-position: center;
-          pointer-events: none;
-          position: absolute;
-          filter: opacity(0.85);
-          -webkit-filter: opacity(0.85);
-          -moz-filter: opacity(0.85);
-        }
-      }
-      article {
-        background-color: white;
-        padding: 0.85rem;
-        figure {
-          height: 150px;
-          width: 150px;
-          img {
-            height: 100%;
-          }
-        }
-        div {
-          height: 100%;
-          width: 235px;
-          box-shadow: none;
-          h1 {
-            color: $gre-darker;
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            text-overflow: ellipsis;
-            overflow: hidden;
-          }
-          time {
-            color: $gre-darker;
-            font-size: 13px;
-            font-weight: 700;
-          }
-          a {
-            direction: rtl;
-          }
-        }
-      }
-      .items-container {
-        position: relative;
-        bottom: -35px;
-      }
-    }
-    .oil-price-news {
-      margin: 6rem 0;
-      article {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        figure {
-          width: 100%;
-          align-self: center;
-        }
-        div {
-          width: 100%;
-          margin-top: 15px;
-          background-color: $grey-light;
-          padding: 10px;
-          p {
-            color: $gre-darker;
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            text-overflow: ellipsis;
-            overflow: hidden;
-          }
-        }
-      }
-      :hover > h1 {
-        color: $black-ter;
-      }
-      button:hover {
-        background-color: $gre-darker;
-      }
-    }
-  }
+.video_button:hover {
+  background-color: $gre-darker !important;
+  color: white !important;
 }
 
 /*

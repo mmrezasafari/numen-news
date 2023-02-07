@@ -10,13 +10,10 @@
   <body>
     <div class="wrapper">
       <header>
-        <nav aria-label="nav" class="navbar columns is-justify-content-space-between px-6 my-3">
+        <nav class="navbar columns is-justify-content-space-between px-6 my-3">
           <div class="column is-7 is-flex is-paddingless">
-            <section class="logo navbar-brand">
-              <a
-                class="navbar-item is-flex-direction-column"
-                href="./index.html"
-              >
+            <section class="navbar-brand" id="logo">
+              <a class="navbar-item is-flex-direction-column" href="./index.html">
                 <h1 class="title is-2 is-marginless has-text-grey-dark">
                   Bitumen
                 </h1>
@@ -32,58 +29,57 @@
               <div class="navbar-start has-text-weight-bold">
                 <a
                   href=""
-                  class="navbar_item navbar-item has-text-grey-darker mx-3"
+                  class="hoverable_orange bold_text navbar-item has-text-grey-darker is-large mx-3"
+                  id="navbar_item"
                 >
                   Home
                 </a>
-                <a href="" class="navbar-item has-text-grey-darker mx-3"
+                <a href="" class="hoverable_orange bold_text navbar-item has-text-grey-darker mx-3"
                   >About Us</a
                 >
                 <div class="navbar-item has-dropdown is-hoverable">
-                  <a class="navbar-link is-arrowless has-text-grey-darker mx-3">
+                  <a class="hoverable_orange bold_text navbar-link is-arrowless has-text-grey-darker mx-3">
                     News
                   </a>
-
+  
                   <div class="navbar-dropdown">
-                    <a class="navbar-item has-text-grey-darker">
-                      Google News
-                    </a>
+                    <a class="hoverable_orange bold_text navbar-item has-text-grey-darker"> Google News </a>
                     <hr class="navbar-divider" />
-                    <a class="navbar-item has-text-grey-darker">
+                    <a class="hoverable_orange bold_text navbar-item has-text-grey-darker">
                       Bitumen India News
                     </a>
                     <hr class="navbar-divider" />
-                    <a class="navbar-item has-text-grey-darker">
+                    <a class="hoverable_orange bold_text navbar-item has-text-grey-darker">
                       Argus Media News
                     </a>
                     <hr class="navbar-divider" />
-                    <a class="navbar-item has-text-grey-darker">
+                    <a class="hoverable_orange bold_text navbar-item has-text-grey-darker">
                       Oil Price News
                     </a>
                   </div>
                 </div>
                 <div class="navbar-item has-dropdown is-hoverable">
-                  <a class="navbar-link is-arrowless has-text-grey-darker mx-3">
+                  <a class="hoverable_orange bold_text navbar-link is-arrowless has-text-grey-darker mx-3">
                     Topics
                   </a>
-
+  
                   <div class="navbar-dropdown">
-                    <a class="navbar-item has-text-grey-darker"> Article </a>
+                    <a class="hoverable_orange bold_text navbar-item has-text-grey-darker"> Article </a>
                     <hr class="navbar-divider" />
-                    <a class="navbar-item has-text-grey-darker"> Videos </a>
+                    <a class="hoverable_orange bold_text navbar-item has-text-grey-darker"> Videos </a>
                     <hr class="navbar-divider" />
-                    <a class="navbar-item has-text-grey-darker"> Events </a>
+                    <a class="hoverable_orange bold_text navbar-item has-text-grey-darker"> Events </a>
                     <hr class="navbar-divider" />
-                    <a class="navbar-item has-text-grey-darker">
+                    <a class="hoverable_orange bold_text navbar-item has-text-grey-darker">
                       Infinity Galaxy Reports
                     </a>
                     <hr class="navbar-divider" />
-                    <a class="navbar-item has-text-grey-darker">
+                    <a class="hoverable_orange bold_text navbar-item has-text-grey-darker">
                       Bitumart Articles
                     </a>
                   </div>
                 </div>
-                <a href="" class="navbar-item has-text-grey-darker mx-3"
+                <a href="" class="hoverable_orange bold_text navbar-item has-text-grey-darker mx-3"
                   >Contact</a
                 >
               </div>
@@ -91,21 +87,14 @@
           </div>
           <div class="column is-3 is-flex is-align-items-center is-paddingless">
             <section class="nav_search_input">
-              <div class="field">
-                <p class="control has-icons-left">
-                  <input class="input" type="text" placeholder="Search" />
-                  <span class="icon is-small is-left">
-                    <i class="fas fa-lock"></i>
-                  </span>
-                </p>
-              </div>
+              <input class="search_submit_input" type="text" placeholder="Search" />
             </section>
           </div>
         </nav>
         <section class="price_slide">
-          <div class="columns is-marginless" style="height: 5rem">
+          <div class="columns is-marginless">
             <div
-              class="column is-1 is-flex is-justify-content-center is-align-items-center has-background-black-ter is-paddingless"
+              class="column is-1 is-flex is-justify-content-center is-align-items-center has-background-black-ter py-4"
             >
               <div class="is-centered">
                 <p
@@ -115,14 +104,10 @@
                 </p>
               </div>
             </div>
-            <div
-              class="price-container column is-11 has-background-grey-light px-5 py-0"
-            >
-              <ul class="level is-gapless h-100">
-                <li class="level-item is-flex is-flex-direction-column">
-                  <p
-                    class="has-text-grey-darker has-text-weight-bold is-size-6"
-                  >
+            <div class="price-container column is-11 has-background-grey-light py-4">
+              <ul class="prices_unorder_list level is-gapless h-100">
+                <li class="perices_lsit_item level-item is-flex is-flex-direction-column">
+                  <p class="has-text-grey-darker has-text-weight-bold is-size-6">
                     1_WTI Crude Oil (Nymx)
                   </p>
                   <p>
@@ -134,13 +119,9 @@
                     >
                     <time class="has-text-grey-darker">7/9/2022</time>
                   </p>
-                </li>
-
-                <li />
-                <li class="level-item is-flex is-flex-direction-column">
-                  <p
-                    class="has-text-grey-darker has-text-weight-bold is-size-6"
-                  >
+                <li/>
+                <li class="perices_lsit_item level-item is-flex is-flex-direction-column">
+                  <p class="has-text-grey-darker has-text-weight-bold is-size-6">
                     2_WTI Crude Oil (Nymx)
                   </p>
                   <p>
@@ -152,13 +133,9 @@
                     >
                     <time class="has-text-grey-darker">7/9/2022</time>
                   </p>
-                </li>
-
-                <li />
-                <li class="level-item is-flex is-flex-direction-column">
-                  <p
-                    class="has-text-grey-darker has-text-weight-bold is-size-6"
-                  >
+                <li/>
+                <li class="perices_lsit_item level-item is-flex is-flex-direction-column">
+                  <p class="has-text-grey-darker has-text-weight-bold is-size-6">
                     3_WTI Crude Oil (Nymx)
                   </p>
                   <p>
@@ -170,13 +147,9 @@
                     >
                     <time class="has-text-grey-darker">7/9/2022</time>
                   </p>
-                </li>
-
-                <li />
-                <li class="level-item is-flex is-flex-direction-column">
-                  <p
-                    class="has-text-grey-darker has-text-weight-bold is-size-6"
-                  >
+                <li/>
+                <li class="perices_lsit_item level-item is-flex is-flex-direction-column">
+                  <p class="has-text-grey-darker has-text-weight-bold is-size-6">
                     4_WTI Crude Oil (Nymx)
                   </p>
                   <p>
@@ -188,13 +161,9 @@
                     >
                     <time class="has-text-grey-darker">7/9/2022</time>
                   </p>
-                </li>
-
-                <li />
-                <li class="level-item is-flex is-flex-direction-column">
-                  <p
-                    class="has-text-grey-darker has-text-weight-bold is-size-6"
-                  >
+                <li/>
+                <li class="perices_lsit_item level-item is-flex is-flex-direction-column">
+                  <p class="has-text-grey-darker has-text-weight-bold is-size-6">
                     5_WTI Crude Oil (Nymx)
                   </p>
                   <p>
@@ -206,13 +175,9 @@
                     >
                     <time class="has-text-grey-darker">7/9/2022</time>
                   </p>
-                </li>
-
-                <li />
-                <li class="level-item is-flex is-flex-direction-column">
-                  <p
-                    class="has-text-grey-darker has-text-weight-bold is-size-6"
-                  >
+                <li/>
+                <li class="perices_lsit_item level-item is-flex is-flex-direction-column">
+                  <p class="has-text-grey-darker has-text-weight-bold is-size-6">
                     6_WTI Crude Oil (Nymx)
                   </p>
                   <p>
@@ -224,13 +189,9 @@
                     >
                     <time class="has-text-grey-darker">7/9/2022</time>
                   </p>
-                </li>
-
-                <li />
-                <li class="level-item is-flex is-flex-direction-column">
-                  <p
-                    class="has-text-grey-darker has-text-weight-bold is-size-6"
-                  >
+                <li/>
+                <li class="perices_lsit_item level-item is-flex is-flex-direction-column">
+                  <p class="has-text-grey-darker has-text-weight-bold is-size-6">
                     7_WTI Crude Oil (Nymx)
                   </p>
                   <p>
@@ -242,13 +203,9 @@
                     >
                     <time class="has-text-grey-darker">7/9/2022</time>
                   </p>
-                </li>
-
-                <li />
-                <li class="level-item is-flex is-flex-direction-column">
-                  <p
-                    class="has-text-grey-darker has-text-weight-bold is-size-6"
-                  >
+                <li/>
+                <li class="perices_lsit_item level-item is-flex is-flex-direction-column">
+                  <p class="has-text-grey-darker has-text-weight-bold is-size-6">
                     8_WTI Crude Oil (Nymx)
                   </p>
                   <p>
@@ -260,13 +217,9 @@
                     >
                     <time class="has-text-grey-darker">7/9/2022</time>
                   </p>
-                </li>
-
-                <li />
-                <li class="level-item is-flex is-flex-direction-column">
-                  <p
-                    class="has-text-grey-darker has-text-weight-bold is-size-6"
-                  >
+                <li/>
+                <li class="perices_lsit_item level-item is-flex is-flex-direction-column">
+                  <p class="has-text-grey-darker has-text-weight-bold is-size-6">
                     9_WTI Crude Oil (Nymx)
                   </p>
                   <p>
@@ -278,13 +231,9 @@
                     >
                     <time class="has-text-grey-darker">7/9/2022</time>
                   </p>
-                </li>
-
-                <li />
-                <li class="level-item is-flex is-flex-direction-column">
-                  <p
-                    class="has-text-grey-darker has-text-weight-bold is-size-6"
-                  >
+                <li/>
+                <li class="perices_lsit_item level-item is-flex is-flex-direction-column">
+                  <p class="has-text-grey-darker has-text-weight-bold is-size-6">
                     10_WTI Crude Oil (Nymx)
                   </p>
                   <p>
@@ -296,8 +245,7 @@
                     >
                     <time class="has-text-grey-darker">7/9/2022</time>
                   </p>
-                </li>
-                <li />
+                <li/>
               </ul>
             </div>
           </div>

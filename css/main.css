@@ -26,15 +26,6 @@ svg {
   max-height: 150px;
   margin-right: 15px;
 }
-.trending_article .trending_turn {
-  height: 40px;
-  position: relative;
-  top: -12px;
-  left: -2px;
-  color: white;
-  font-weight: 500;
-  border-radius: 0 0 10% 10%;
-}
 .trending_article .title {
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -51,6 +42,16 @@ svg {
   text-overflow: ellipsis;
   overflow: hidden;
   color: #2B2D42;
+}
+
+.trending_turn {
+  height: 40px;
+  position: relative;
+  top: -12px;
+  left: -2px;
+  color: white;
+  font-weight: 500;
+  border-radius: 0 0 10% 10%;
 }
 
 .post-card {
@@ -95,61 +96,84 @@ svg {
   height: 100% !important;
 }
 
+.bold_text {
+  font-size: larger;
+  font-weight: 700;
+}
+
+.search_submit_input {
+  height: 3rem !important;
+  background-color: #F6F4F0;
+  outline: none;
+  border: none;
+  box-shadow: none !important;
+  padding: 0 20px;
+  font-size: large;
+}
+
+.search_submit_input::placeholder {
+  color: #A5A4AA;
+  font-weight: 500;
+  font-size: large;
+}
+
+.search_submit_input:focus {
+  outline: none !important;
+}
+
+.hoverable_button:hover {
+  background-color: #F64225 !important;
+  color: white !important;
+  border: none;
+}
+.hoverable_button:hover span {
+  color: white !important;
+}
+
 .wrapper {
   display: grid;
   grid-template-areas: "header header header header header header" "main main main main main main" "footer footer footer footer footer footer";
 }
-.wrapper header {
+
+header {
   grid-area: header;
 }
-.wrapper main {
+
+main {
   grid-area: main;
+  background-color: #F6F4F0 !important;
+  padding-top: 5rem;
 }
-.wrapper footer {
+
+footer {
   grid-area: footer;
 }
 
 /*
     * _____________________________________________________________________ HEADER STYLE __________________________________________________________________________ *
 */
-.navbar-start a {
-  font-size: larger;
-}
-.navbar-start :hover {
-  color: #F64225 !important;
-  background-color: transparent !important;
-}
-.navbar-start .navbar-dropdown {
+.navbar-dropdown {
   background-color: rgb(255, 255, 255) !important;
 }
 
-.nav_search_input input {
-  height: 3rem !important;
-  background-color: #F6F4F0;
-  outline: none;
-  border: none;
-  box-shadow: none !important;
-}
-.nav_search_input ::placeholder {
-  color: #A5A4AA;
-  font-weight: 500;
-  font-size: large;
-}
-.nav_search_input :focus {
-  outline: none !important;
+.hoverable_orange:hover {
+  color: #F64225 !important;
+  background-color: transparent !important;
 }
 
-.price_slide .price-container {
-  overflow: hidden;
+.price-container {
   width: 230% !important;
+  overflow: hidden;
 }
-.price_slide .price-container ul {
+
+.prices_unorder_list {
   position: relative;
   list-style: none;
   padding: 0;
   margin: 0;
 }
-.price_slide .price-container ul li {
+
+.perices_lsit_item {
   animation: price-slide 70s infinite;
 }
 
@@ -206,89 +230,26 @@ svg {
 /* 
 * ______________________________________________________________________ MAIN STYLE ______________________________________________________________________________ *
 */
-main {
-  background-color: #F6F4F0;
-}
-main .see_more_button {
+.see_more_button {
   width: 100%;
   background-color: #F64225;
   border: none !important;
   border-radius: none;
 }
-main .see_more_button:hover {
+
+.see_more_button:hover {
   background-color: #F64225;
   color: white;
 }
-main .price_slide .price-container {
-  overflow: hidden;
-  width: 230%;
-}
-main .price_slide .price-container ul {
-  position: relative;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-main .price_slide .price-container ul li {
-  animation: price-slide 70s infinite;
-}
-@keyframes price-slide {
-  5% {
-    transform: translateX(0%);
-  }
-  10% {
-    transform: translateX(0%);
-  }
-  15% {
-    transform: translateX(-100%);
-  }
-  20% {
-    transform: translateX(-100%);
-  }
-  30% {
-    transform: translateX(-200%);
-  }
-  35% {
-    transform: translateX(-200%);
-  }
-  40% {
-    transform: translateX(-300%);
-  }
-  45% {
-    transform: translateX(-300%);
-  }
-  50% {
-    transform: translateX(-400%);
-  }
-  55% {
-    transform: translateX(-400%);
-  }
-  60% {
-    transform: translateX(-500%);
-  }
-  65% {
-    transform: translateX(-500%);
-  }
-  70% {
-    transform: translateX(-600%);
-  }
-  75% {
-    transform: translateX(-600%);
-  }
-  80% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(0%);
-  }
-}
-main .about {
+
+.about_card {
   display: inline-block;
   position: relative;
   width: 100%;
-  min-height: 45rem;
+  margin-bottom: 12rem;
 }
-main .about .about-bg-image {
+
+.about-bg-image {
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -296,34 +257,31 @@ main .about .about-bg-image {
   pointer-events: none;
   position: absolute;
 }
-main .about div .level {
-  height: 100%;
+
+.about_card {
+  box-shadow: none !important;
 }
-main .about div .level .card {
-  box-shadow: none;
+
+.about_card_header {
+  box-shadow: none !important;
 }
-main .about div .level .card .card-header {
-  box-shadow: none;
-}
-main .about div .level .card .card-content p {
+
+.about_card_content p {
   word-break: break-all;
 }
-main .about div .level .card .card-footer {
-  border: none;
+
+.aboute_card_footer {
+  border: none !important;
 }
-main .about div .level .card .card-footer .button:hover {
-  background-color: #F64225;
-}
-main .about div .level .card .card-footer .button:hover span {
-  color: white !important;
-}
-main .about .about-news section {
+
+.about-news {
   position: relative;
   width: 400px;
   height: 616px;
   overflow: hidden;
 }
-main .about .about-news section .about-news-slider {
+
+.about-news-slider {
   position: relative;
   list-style: none;
   height: 10000%;
@@ -333,23 +291,26 @@ main .about .about-news section .about-news-slider {
   transition: all 750ms ease;
   left: 0;
 }
-main .about .about-news section .about-news-slider .about-news-slide {
+
+.about-news-slide {
   position: relative;
   margin: 10px 0;
 }
-main .about .about-news section .about-news-slider .about-news-slide article {
+
+.about_news_article {
   background-color: white;
   height: 192px !important;
   padding: 15px;
 }
-main .about .about-news section .about-news-slider .about-news-slide article figure {
+
+.about_news_figure {
   height: 100%;
   width: 175px;
 }
-main .about .about-news section .about-news-slider .about-news-slide article figure img {
+.about_news_figure img {
   height: 100%;
 }
-main .about .about-news section .about-news-slider .about-news-slide article figure time {
+.about_news_figure time {
   position: absolute;
   top: 20px;
   left: 7px;
@@ -359,14 +320,22 @@ main .about .about-news section .about-news-slider .about-news-slide article fig
   padding: 6px 10px;
   font-weight: 500;
 }
-main .about .about-news section .about-news-slider .about-news-slide article div {
+
+.about_news_content {
   height: 100%;
   width: 205px;
+  background-color: none;
+  box-shadow: none !important;
 }
-main .about .about-news section .about-news-slider .about-news-slide article div h1 {
+.about_news_content h1 {
   color: #2B2D42;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-main .about .about-news section .about-news-slider .about-news-slide article div p {
+.about_news_content p {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -374,63 +343,77 @@ main .about .about-news section .about-news-slider .about-news-slide article div
   overflow: hidden;
   color: #2B2D42;
 }
-main .about .about-news section .about-news-slider .about-news-slide article button {
+
+.about_news_see_more_btn {
   width: 100%;
-  position: absolute;
+  position: absolute !important;
   bottom: 0;
   left: 0;
-  border-radius: 0;
+  border-radius: 0 !important;
+  border: none !important;
   transform: translateY(50px);
   transition: 0.3s;
   font-weight: 500;
+  color: #F64225 !important;
 }
-main .about .about-news section .about-news-slider .about-news-slide:hover button {
+
+.about_news_article:hover {
+  cursor: pointer;
+}
+.about_news_article:hover .about_news_see_more_btn {
   transform: translateY(0);
 }
-main .about .about-news .last-btn {
+
+.last-btn {
   width: 95%;
-  background-color: transparent;
   border: none;
   border-top: 4px solid #F64225;
-  border-radius: 0;
+  border-radius: 0 !important;
   color: white;
   -webkit-transition: background-color 0.3s ease-out;
   -moz-transition: background-color 0.3s ease-out;
   -o-transition: background-color 0.3s ease-out;
   transition: background-color 0.3s ease-out;
 }
-main .about .about-news .last-btn:hover {
+
+.last-btn:hover {
   background-color: #F64225;
 }
-main .about .about-news .last-btn-span {
+
+.last-btn-span {
   transform: rotate(90deg);
+  color: #F64225 !important;
 }
-main .infinity {
+
+.infinity {
   position: relative;
-  top: 164px;
+  top: 146px;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
   -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
 }
-main .infinity article {
+
+.infinity_article {
   background-color: white;
   width: 100%;
   height: 180px !important;
   padding: 0.85rem;
 }
-main .infinity article figure {
+
+.infinity_article_figure {
   height: 150px;
   width: 150px;
 }
-main .infinity article figure img {
+.infinity_article_figure img {
   height: 100%;
 }
-main .infinity article div {
+
+.infinity_article_content {
   height: 100%;
   width: 225px;
   box-shadow: none;
 }
-main .infinity article div h1 {
+.infinity_article_content h1 {
   color: #2B2D42;
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -438,12 +421,12 @@ main .infinity article div h1 {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-main .infinity article div time {
+.infinity_article_content time {
   color: #2B2D42;
   font-size: 13px;
   font-weight: 700;
 }
-main .infinity article div p {
+.infinity_article_content p {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -451,33 +434,36 @@ main .infinity article div p {
   overflow: hidden;
   color: #2B2D42;
 }
-main .infinity button {
-  width: 3rem;
-  height: 100%;
-  border-radius: 0;
+
+.see_more_button_infinity {
+  width: 3rem !important;
+  height: 100% !important;
+  border-radius: 0 !important;
+  background-color: #F64225 !important;
+  border: none !important;
 }
-main .above-section {
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-}
-main .above-section .bitumen-topics .level-right .card {
+
+.topics_card {
   width: 430px;
   background-color: transparent;
   box-shadow: none;
   border-radius: 0;
 }
-main .above-section .bitumen-topics .level-right .card .card-content {
+
+.topic_card_content {
   height: 150px;
 }
-main .above-section .bitumen-topics .level-right .card .card-content div .dot {
+
+.dot {
   width: 35px;
   height: 10px;
   background-color: #F64225;
 }
-main .above-section .bitumen-topics .level-right .card .card-content div div {
+
+.topic_content {
   height: 120px;
 }
-main .above-section .bitumen-topics .level-right .card .card-content div div h1 {
+.topic_content h1 {
   color: #2B2D42;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -485,12 +471,12 @@ main .above-section .bitumen-topics .level-right .card .card-content div div h1 
   text-overflow: ellipsis;
   overflow: hidden;
 }
-main .above-section .bitumen-topics .level-right .card .card-content div time {
+.topic_content time {
   color: #2B2D42;
   font-size: 13px;
   font-weight: 700;
 }
-main .above-section .bitumen-topics .level-right .card .card-content div p {
+.topic_content p {
   color: #2B2D42;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -498,24 +484,18 @@ main .above-section .bitumen-topics .level-right .card .card-content div p {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-main .above-section button {
-  width: 100%;
-  border-radius: 0;
-}
-main .above-section button:hover {
-  background-color: #F64225;
-  color: white !important;
-}
-main .above-section .events-container .events {
+
+.events {
   height: 100%;
 }
-main .above-section .events-container .events .event {
+
+.event {
   display: inline-block;
   position: relative;
   width: 100%;
   min-height: 17rem;
 }
-main .above-section .events-container .events .event .event-bg-image {
+.event .event-bg-image {
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -523,17 +503,19 @@ main .above-section .events-container .events .event .event-bg-image {
   pointer-events: none;
   position: absolute;
 }
-main .above-section .events-container .events .event h1 {
+.event h1 {
   height: 100%;
   background-color: rgba(10, 10, 10, 0.363);
   display: flex;
   align-items: flex-end;
   z-index: 1;
 }
-main .above-section .events-container .events :hover h1 {
+
+.event:hover h1 {
   height: 30%;
   animation: example 500ms ease-in-out forwards;
 }
+
 @keyframes example {
   0% {
     height: 100%;
@@ -543,26 +525,25 @@ main .above-section .events-container .events :hover h1 {
     background-color: #F64225;
   }
 }
-main .above-section .bitumen-price-reports article {
+.price_report_article {
   height: 170px !important;
   padding: 0.85rem;
   padding-bottom: 0;
   padding-right: 0;
 }
-main .above-section .bitumen-price-reports article figure {
+.price_report_article figure {
   height: 100%;
   width: 150px;
 }
-main .above-section .bitumen-price-reports article figure img {
+.price_report_article figure img {
   height: 100%;
 }
-main .above-section .bitumen-price-reports article div {
+
+.price_reports_content {
   height: 100%;
   width: 260px;
-  box-shadow: none;
-  border-radius: 0;
 }
-main .above-section .bitumen-price-reports article div h1 {
+.price_reports_content h1 {
   color: #2B2D42;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -570,12 +551,12 @@ main .above-section .bitumen-price-reports article div h1 {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-main .above-section .bitumen-price-reports article div time {
+.price_reports_content time {
   color: #2B2D42;
   font-size: 13px;
   font-weight: 700;
 }
-main .above-section .bitumen-price-reports article div p {
+.price_reports_content p {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -583,32 +564,36 @@ main .above-section .bitumen-price-reports article div p {
   overflow: hidden;
   color: #2B2D42;
 }
-main .main-section {
+
+.main-section {
   margin-top: 9rem;
 }
-main .main-section .bitumen-news .is-12 {
+
+.bitumen_news_posts {
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
   -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
 }
-main .main-section .bitumen-news article {
+
+.bitumen_news_article {
   background-color: white;
   height: 180px !important;
   padding: 0.85rem;
 }
-main .main-section .bitumen-news article figure {
+.bitumen_news_article figure {
   height: 150px;
   width: 150px;
 }
-main .main-section .bitumen-news article figure img {
+.bitumen_news_article figure img {
   height: 100%;
 }
-main .main-section .bitumen-news article div {
+
+.bitumen_news_content {
   height: 100%;
   width: 225px;
-  box-shadow: none;
+  box-shadow: none !important;
 }
-main .main-section .bitumen-news article div h1 {
+.bitumen_news_content h1 {
   color: #2B2D42;
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -616,12 +601,12 @@ main .main-section .bitumen-news article div h1 {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-main .main-section .bitumen-news article div time {
+.bitumen_news_content time {
   color: #2B2D42;
   font-size: 13px;
   font-weight: 700;
 }
-main .main-section .bitumen-news article div p {
+.bitumen_news_content p {
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -629,12 +614,13 @@ main .main-section .bitumen-news article div p {
   overflow: hidden;
   color: #2B2D42;
 }
-main .main-section .bitumen-news button {
+
+.bitumen_news_button {
   width: 3rem;
-  height: 100%;
-  border-radius: 0;
+  border-radius: 0 !important;
 }
-main .main-section .argus-media-news .item {
+
+.argus_media_news_item {
   width: 290px;
   height: 300px;
   display: flex;
@@ -647,12 +633,12 @@ main .main-section .argus-media-news .item {
   -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.14);
   border-bottom: 4px solid #F64225;
 }
-main .main-section .argus-media-news .item time {
+.argus_media_news_item time {
   color: #F64225;
   font: 13px;
   font-weight: 500;
 }
-main .main-section .argus-media-news .item p {
+.argus_media_news_item p {
   word-break: break-all;
   color: #2B2D42;
   display: -webkit-box;
@@ -661,70 +647,32 @@ main .main-section .argus-media-news .item p {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-main .main-section .argus-media-news :hover > .hovered {
+
+.argus_media_news_item:hover > .hovered {
   color: #F64225;
 }
-main .main-section .argus-media-news button {
-  width: 32%;
+
+.argus_media_news_btn {
   float: right;
+  width: 18.2rem;
 }
-main .main-section .bitumen-price-reports article {
-  height: 170px !important;
-  padding: 0.85rem;
-  padding-bottom: 0;
-  padding-right: 0;
+
+.bitumen-grade h1 {
+  font-size: 14px;
 }
-main .main-section .bitumen-price-reports article figure {
-  height: 100%;
-  width: 150px;
-}
-main .main-section .bitumen-price-reports article figure img {
-  height: 100%;
-}
-main .main-section .bitumen-price-reports article div {
-  height: 100%;
-  width: 260px;
-  box-shadow: none;
-  border-radius: 0;
-}
-main .main-section .bitumen-price-reports article div h1 {
-  color: #2B2D42;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-main .main-section .bitumen-price-reports article div time {
-  color: #2B2D42;
-  font-size: 13px;
-  font-weight: 700;
-}
-main .main-section .bitumen-price-reports article div p {
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  color: #2B2D42;
-}
-main .main-section .bitumen-grade p {
+
+.bitumen_grade_content p {
   font-weight: 500;
   font-size: large;
   color: #2B2D42;
 }
-main .main-section .bitumen-grade .title {
-  font-size: 14px;
-}
-main .main-section .bitumen-grade .item {
-  height: 4.1rem;
-  align-items: center;
-}
-main .main-section .advertising {
+
+.advertising {
   position: relative;
   min-height: 309px;
 }
-main .main-section .advertising .advertising-bg-img {
+
+.advertising-bg-img {
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -735,28 +683,38 @@ main .main-section .advertising .advertising-bg-img {
   -webkit-filter: opacity(0.85);
   -moz-filter: opacity(0.85);
 }
-main .main-section .advertising button {
+
+.advertising_button {
   width: 150px;
   height: 40px;
-  background-color: #2B2D42;
+  background-color: #2B2D42 !important;
   border: none;
   position: relative;
   bottom: 20px;
-  color: white;
+  color: white !important;
+  border-radius: 0 !important;
+  border: none !important;
   transition: background-color 0.2s linear;
   transform: translate(0);
 }
-main .main-section .advertising :hover {
+
+.advertising_button:hover {
   color: #2B2D42 !important;
-  background-color: white;
+  background-color: white !important;
   border-left: 5px solid #2B2D42;
 }
-main .main-section .bitumart-article .bitumart-article-main {
+
+.bitumart {
+  margin-bottom: 12rem;
+}
+
+.bitumart-main {
   position: relative;
   width: 100%;
   height: 15rem;
 }
-main .main-section .bitumart-article .bitumart-article-main .bitumart-bg-img {
+
+.bitumart-bg-img {
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -767,23 +725,25 @@ main .main-section .bitumart-article .bitumart-article-main .bitumart-bg-img {
   -webkit-filter: opacity(0.85);
   -moz-filter: opacity(0.85);
 }
-main .main-section .bitumart-article article {
+
+.bitumart_article {
   background-color: white;
   padding: 0.85rem;
 }
-main .main-section .bitumart-article article figure {
+.bitumart_article figure {
   height: 150px;
   width: 150px;
 }
-main .main-section .bitumart-article article figure img {
+.bitumart_article figure img {
   height: 100%;
 }
-main .main-section .bitumart-article article div {
+
+.bitumart_article_content {
   height: 100%;
   width: 235px;
   box-shadow: none;
 }
-main .main-section .bitumart-article article div h1 {
+.bitumart_article_content h1 {
   color: #2B2D42;
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -791,37 +751,42 @@ main .main-section .bitumart-article article div h1 {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-main .main-section .bitumart-article article div time {
+.bitumart_article_content time {
   color: #2B2D42;
   font-size: 13px;
   font-weight: 700;
 }
-main .main-section .bitumart-article article div a {
+.bitumart_article_content a {
   direction: rtl;
 }
-main .main-section .bitumart-article .items-container {
+
+.items-container {
   position: relative;
-  bottom: -35px;
+  bottom: -45px;
 }
-main .main-section .oil-price-news {
-  margin: 6rem 0;
+
+.oil-price-news {
+  margin-bottom: 5rem !important;
 }
-main .main-section .oil-price-news article {
+
+.oil_price_news_item {
+  width: 18rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-main .main-section .oil-price-news article figure {
+.oil_price_news_item figure {
   width: 100%;
   align-self: center;
 }
-main .main-section .oil-price-news article div {
+
+.oil_price_news_item_content {
   width: 100%;
   margin-top: 15px;
   background-color: #F6F4F0;
   padding: 10px;
 }
-main .main-section .oil-price-news article div p {
+.oil_price_news_item_content p {
   color: #2B2D42;
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -829,11 +794,20 @@ main .main-section .oil-price-news article div p {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-main .main-section .oil-price-news :hover > h1 {
-  color: #F64225;
+.oil_price_news_item_content time {
+  color: #2B2D42;
+  font-size: 13px;
+  font-weight: 700;
 }
-main .main-section .oil-price-news button:hover {
-  background-color: #2B2D42;
+
+.oil_price_news_item_content:hover > h1 {
+  color: #F64225;
+  cursor: pointer;
+}
+
+.video_button:hover {
+  background-color: #2B2D42 !important;
+  color: white !important;
 }
 
 /*
